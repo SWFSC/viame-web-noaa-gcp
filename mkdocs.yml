@@ -31,3 +31,4 @@ theme:
 nav:
   - User Guide: 
     - Home: index.md
+    - Network changes: network-changes.md
