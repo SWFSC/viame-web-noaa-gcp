@@ -29,4 +29,5 @@ theme:
 #     property: UA-6042509-43
 
 nav:
-  - Home: tmp.md
+  - User Guide: 
+    - Home: index.md
