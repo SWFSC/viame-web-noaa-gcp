@@ -5,8 +5,7 @@ site_author: Sam Woodman
 repo_url: https://github.com/smwoodman/viame-web-fisheries-cloud
 
 theme:
-  name: just-the-docs
-  color_scheme: dark
+  name: material
 #   highlightjs: true
 #   palette:
 #     primary: black
