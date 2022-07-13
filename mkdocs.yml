@@ -30,6 +30,4 @@ extra_css: [extra.css]
 #     property: UA-6042509-43
 
 nav:
-  - User Guide:
-    - Home: README.md
-    - Web Version: README-split-service.md
+  - Home: README.md
