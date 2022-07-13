@@ -1,21 +1,21 @@
-site_name: VIAME-Web-Fisheries-Cloud
+site_name: tmp
 site_url: https://smwoodman.github.io/viame-web-fisheries-cloud
 site_description: Documentation for VIAME-Web in the NOAA Fisheries Cloud
 site_author: Sam Woodman
 
 repo_url: https://github.com/smwoodman/viame-web-fisheries-cloud
 
-theme:
-  name: material
-  highlightjs: true
-  palette:
-    primary: black
-  features:
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.expand
+# theme:
+#   name: material
+#   highlightjs: true
+#   palette:
+#     primary: black
+#   features:
+#     - navigation.tabs
+#     - navigation.tabs.sticky
+#     - navigation.expand
 
-extra_css: [extra.css]
+# extra_css: [extra.css]
 
 # extra:
 #   social:
