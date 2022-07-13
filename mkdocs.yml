@@ -1,4 +1,4 @@
-site_name: DIVEE
+site_name: VIAME-Web-todo
 site_url: https://smwoodman.github.io/viame-web-fisheries-cloud
 site_author: Sam Woodman
 
@@ -9,10 +9,10 @@ theme:
 #   highlightjs: true
 #   palette:
 #     primary: black
-#   features:
-#     - navigation.tabs
-#     - navigation.tabs.sticky
-#     - navigation.expand
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.expand
 
 # extra_css: [extra.css]
 
