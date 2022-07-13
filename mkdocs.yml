@@ -1,0 +1,35 @@
+site_name: VIAME-Web-Fisheries-Cloud
+site_url: https://smwoodman.github.io/viame-web-fisheries-cloud
+site_description: Documentation for VIAME-Web in the NOAA Fisheries Cloud
+site_author: Sam Woodman
+
+repo_url: https://github.com/smwoodman/viame-web-fisheries-cloud
+
+theme:
+  name: material
+  highlightjs: true
+  palette:
+    primary: black
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.expand
+
+extra_css: [extra.css]
+
+# extra:
+#   social:
+#     - icon: fontawesome/brands/github
+#       link: https://github.com/kitware/dive
+#     - icon: fontawesome/brands/docker
+#       link: https://hub.docker.com/r/kitware/viame-web
+#     - icon: fontawesome/brands/discourse
+#       link: https://discourse.kitware.com/c/viame-dive/17
+#   analytics:
+#     provider: google
+#     property: UA-6042509-43
+
+nav:
+  - User Guide:
+    - Home: README.md
+    - Web Version: README-split-service.md
