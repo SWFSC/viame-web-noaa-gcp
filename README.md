@@ -1,5 +1,11 @@
 # viame-web-fisheries-cloud
-Deploy an instance of VIAME-Web in the NOAA Fisheries Cloud
+Deploy an instance of VIAME-Web in the NOAA Fisheries Cloud.
+
+NOTE: This repo is currently under development. Please do not use without conulatation with the author
+
+## Citation
+
+In progress
 
 ## Disclaimer
 
