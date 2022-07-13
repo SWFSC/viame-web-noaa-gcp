@@ -30,4 +30,4 @@ repo_url: https://github.com/smwoodman/viame-web-fisheries-cloud
 #     property: UA-6042509-43
 
 nav:
-  - Home: README.md
+  - Home: tmp.md
