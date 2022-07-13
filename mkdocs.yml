@@ -30,9 +30,9 @@ theme:
 
 nav:
   - Home: 
-    - Home: home.md
-    - Network changes: network-changes.md
+    - Home: index.md
+    - Network Changes: network-changes.md
   - Deployment: 
     - Overview: deployment-overview.md
-    - Default option: deployment-default.md
-    - Split services option: deployment-split.md
+    - Default Deployment: deployment-default.md
+    - Split Services Deployment: deployment-split.md
