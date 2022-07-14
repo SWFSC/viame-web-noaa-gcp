@@ -13,9 +13,9 @@ It is recommended to clone the [viame-web-fisheries-cloud repo](https://github.c
 git clone https://github.com/smwoodman/viame-web-fisheries-cloud.git
 ```
 
-## Create General GCP Resources
+## Create GCP Resources
 
-Both scenarios require many of the same resources, including: a GCS bucket in which to store imagery that will be connected to your VIAME-Web deployment, a NMFS-approved image, and a service account with sufficient permissions.
+Both scenarios require many of the same resources, including: a GCS bucket in which to store imagery that will be connected to your VIAME-Web deployment, a NMFS-approved image, and a service account with sufficient permissions. The required CORS headers for the bucket are defined [here](https://kitware.github.io/dive/Deployment-Storage/#setting-up-cors). 
 
 ### Sample Terraform Block
 
