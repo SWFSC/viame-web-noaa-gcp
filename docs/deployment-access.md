@@ -4,7 +4,7 @@ The services (Docker containers) installed on the VM(s) must be running to acces
 
 ## Run Startup Scripts
 
-These commands to start the services can be run from Cloud Shell or a local shell with [Google Cloud CLI installed](https://cloud.google.com/sdk/docs/install) (i.e., a Cloud SDK shell).
+These commands to start the services can be run from Cloud Shell or a local shell with [Google Cloud CLI installed](deployment-overview.md) (i.e., a Cloud SDK shell).
 
 Note that for other users to run the startup script, they must have permission to run `docker-compose` on the VM. To allow this, you can add users to the docker group. See [manage docker as a non-root user](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) for details.
 
@@ -31,10 +31,10 @@ gcloud compute ssh $INSTANCE_NAME_WORKER --zone=$ZONE --command="/opt/noaa/dive_
 
 ## Create SSH Tunnel
 
-Now that you have provisioned and restarted the VM(s), you can almost access the VIAME-Web instance. Assuming the stack is running, you need to tunnel the 8010 port through SSH. The following command needs to be run from a [Cloud SDK shell](https://cloud.google.com/sdk/docs/install) on your local workstation. Note that you may need to define variables and/or change the variable format.
+Now that you have provisioned and restarted the VM(s), you can almost access the VIAME-Web instance. Assuming the stack is running, you need to tunnel the 8010 port through SSH. The following command needs to be run from a Cloud SDK shell on your local workstation. Note that you may need to define variables and/or change the variable format.
 
 ```shell
 gcloud compute ssh $INSTANCE_NAME --zone=$ZONE -- -N -L 8010:localhost:8010
 ```
 
-You should now be able to access the VIAME-Web instance (the web service) at http://localhost:8010, as described in the [DIVE docs](https://kitware.github.io/dive/Deployment-Docker-Compose/#basic-deployment).
+You should now be able to access the VIAME-Web instance (the web service) at <http://localhost:8010>, as described in the [DIVE docs](https://kitware.github.io/dive/Deployment-Docker-Compose/#basic-deployment).

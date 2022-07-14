@@ -2,10 +2,12 @@
 
 ## Before you begin
 
-Read the DIVE [Deployment Options Overview](https://kitware.github.io/dive/Deployment-Overview/) and [Cloud Deployment Guide - Before you begin
+* Read the DIVE [Deployment Options Overview](https://kitware.github.io/dive/Deployment-Overview/) and [Cloud Deployment Guide - Before you begin
 ](https://kitware.github.io/dive/Deployment-Provision/#before-you-begin). 
 
-Also, ensure that the required [network changes](network-changes.md) have been made for your project.
+* Ensure that the required [network changes](network-changes.md) have been made for your project.
+
+* Ensure that the [Google Cloud CLI](https://cloud.google.com/sdk/gcloud) tools are [installed and configured](https://cloud.google.com/sdk/docs/install) on your local workstation.
 
 ## Overview
 

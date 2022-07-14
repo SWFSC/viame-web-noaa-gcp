@@ -114,3 +114,37 @@ gcloud compute ssh $INSTANCE_NAME_WORKER --zone=$ZONE --command="/opt/noaa/dive_
 ## Access VIAME-Web deployment
 
 See [Access VIAME-Web](deployment-access.md)
+
+## Web and Worker VM Communication
+
+For the split services to be able to work, the web and worker VMs must be able to communicate. You can confirm this either through either the DIVE API (recommended) or the VMs directly. Before testing the connection, be sure both the web and worker VMs are on and the services have been started (i.e., the startup scripts have been run). 
+
+### DIVE API
+
+1) Open the swagger UI at `http://{server_url}:{server_port}/api/v1` (likely <http://localhost:8010/api/v1>).
+
+2) Under the 'worker' endpoint, issue a `GET /worker/status` request. 
+
+3) The 'Response Body' section should be a long list of successful connection attempts. If the 'Response Body' values are `null`, then there is a communication issue.
+
+### Other
+
+1) SSH into the web VM and check that the VM is listening on at least ports 8010 and 5672. Note that you must have root access to run these commands.
+
+```shell
+# check if VM is listening on any ports - should be at least 8010 and 5672 
+sudo apt install net-tools #install if necessary 
+netstat -plaunt
+
+# Get the internal IP of the web VM from the third block in the output
+ifconfig
+````
+
+2) SSH into the worker VM and check if the VM can make a connection to the web VM on the expected ports. These commands should output a string like `Connection to ##.##.##.## 8010 port [tcp/*] succeeded!`. If the worker VM cannot make a connection to the web VM, then you will get a 'operation timed out' message.
+
+```shell
+WEB_IP=##.##.##.##
+nc -v -w3 $WEB_IP 8010
+nc -v -w3 $WEB_IP 5672
+
+````

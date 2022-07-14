@@ -32,7 +32,7 @@ nav:
   - General: 
     - Home: index.md
     - Network Changes: network-changes.md
-  - Deployment: 
+  - Deployment Guide: 
     - Overview: deployment-overview.md
     - Deployment: 
       - General: deployment-general.md
@@ -40,4 +40,10 @@ nav:
         - Default: deployment-default.md
         - Split Services: deployment-split.md
     - Access VIAME-Web: deployment-access.md
+  - Administrator Guide:
+    - Overview: admin-overview.md
+    - Destroying and Recreating VMs: admin-resources.md
+    - Starting Services: admin-startup.md
+    - Server Branding Config: admin-branding.md
+    - Staying Up to Date: admin-updating.md
   - Support: support.md
