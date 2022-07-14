@@ -8,9 +8,50 @@ These instructions will create a single VM with at least one GPU, meaning all op
 
 Unless otherwise specified, these commands are expected to be run from [Cloud Shell](https://cloud.google.com/shell). It is recommended to clone [this repo](https://github.com/smwoodman/viame-web-fisheries-cloud) in the home directory of your Cloud Shell to 1) use the module and 2) so that relateive paths are correct.
 
-## Create GCP VM
+## Create GCP Resources
 
-To create a single VM for an instance of VIAME-Web, create a VM with at least one GPU using [this dive module](main.tf). Be sure to provide a non-zero value for gpu_count.
+To create a single VM for an instance of VIAME-Web, create a VM with at least one GPU using [this dive module](main.tf). Be sure to provide a non-zero value for gpu_count. Your Terraform code block may look like (note this block includes variables that you should define or replace based on your specific project):
+
+```terraform
+data "google_compute_image" "nmfs_image_name" {
+  name  = var.image_name
+  project = var.project
+}
+
+resource "google_service_account" "vm_sa1" {
+  account_id   = "vm-sa1"
+  display_name = "vm-sa1"
+}
+
+resource "google_project_iam_member" "vm_sa1_roles" {
+  project = var.project
+  for_each = toset([
+    "roles/storage.admin", 
+    "roles/compute.admin"
+  ])
+  role = each.key
+  member = "serviceAccount:${google_service_account.vm_sa1.email}"
+}
+
+module "gce-viame-web-amlr" {
+  source = "~/viame-web-fisheries-cloud"
+
+  name = "viame-web-amlr"
+  zone = var.zone
+
+  machine_type = "e2-standard-2"
+  image = data.google_compute_image.nmfs_image_name.self_link
+  disk_size = 300
+  gpu_type  = "nvidia-tesla-t4"
+  gpu_count = 1
+  deletion_protection = true
+
+  subnetwork_project = var.subnetwork_project
+  subnetwork = var.subnetwork
+  tags = ["allow-ssh", "allow-outbound-nat-primary", "allow-outbound-nat-secondary"]
+  sa_email = google_service_account.vm_sa1.email
+}
+```
 
 ## Provision GCP VM
 
@@ -19,9 +60,10 @@ Once the VM is created, download the install script to the VM, make it executabl
 ```shell
 ZONE=us-east4-b
 INSTANCE_NAME=viame-web-amlr
+REPO_URL=https://raw.githubusercontent.com/smwoodman/viame-web-fisheries-cloud
 
 gcloud compute ssh $INSTANCE_NAME --zone=$ZONE \
-  --command="curl -L https://raw.githubusercontent.com/smwoodman/viame-web-fisheries-cloud/scripts/dive_install.sh -o ~/dive_install.sh && chmod +x ~/dive_install.sh"
+  --command="curl -L $REPO_URL/scripts/dive_install.sh -o ~/dive_install.sh && chmod +x ~/dive_install.sh"
 
 # ssh into the VM
 gcloud compute ssh $INSTANCE_NAME --zone=$ZONE
@@ -42,7 +84,7 @@ gcloud compute ssh $INSTANCE_NAME --zone=$ZONE --command="/opt/noaa/dive_startup
 
 ## Access VIAME-Web
 
-Now that we have installed everything, we can access the VIAME-Web instance. Note that if you are restarting a VM that has previously been provisioned, you must run the startup script again to start the stack.
+Now that you have installed everything, you can access the VIAME-Web instance. Note that if you have just turned on the VM, you must run the startup script again to start the stack.
 
 ```shell
 # From SDK or Cloud Shell
@@ -51,7 +93,7 @@ gcloud compute ssh $INSTANCE_NAME --zone=$ZONE --command="/opt/noaa/dive_startup
 
 For a user to run the startup script, they must have permission to run `docker-compose` on the VM. To allow this, you can add users to the docker group. See [manage docker as a non-root user](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) for details.
 
-At this point, the stack should be running, and you need to tunnel the port (8010) through SSH. The following command need to be run from your local workstation, ideally from the [Google Cloud SDK Shell](https://cloud.google.com/sdk/docs/install). Note that you may need to change the variable format if running from the Windows command prompt.
+At this point, the stack should be running, and you need to tunnel the port (8010) through SSH. The following command need to be run from your local workstation, ideally from the [Google Cloud SDK Shell](https://cloud.google.com/sdk/docs/install). Note that you may need to define and/or change the variable format.
 
 ```shell
 gcloud compute ssh $INSTANCE_NAME --zone=$ZONE -- -N -L 8010:localhost:8010

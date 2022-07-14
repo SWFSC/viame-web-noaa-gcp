@@ -6,7 +6,7 @@ hide:
 
 # Support
 
-For support regarding the use of VIAME-Web, see the [User Guide](https://kitware.github.io/dive). 
+For support regarding the use of VIAME-Web, see the [DIVE User Guide](https://kitware.github.io/dive). 
 
 For support with deploying an instance of VIAME-Web in the NOAA Fisheries Cloud, there are several options depending on the type of support you need:
 
