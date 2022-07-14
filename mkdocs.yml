@@ -6,7 +6,7 @@ repo_url: https://github.com/smwoodman/viame-web-fisheries-cloud
 
 theme:
   name: material
-#   highlightjs: true
+  highlightjs: true
 #   palette:
 #     primary: black
   features:
@@ -34,6 +34,10 @@ nav:
     - Network Changes: network-changes.md
   - Deployment: 
     - Overview: deployment-overview.md
-    - Default Deployment: deployment-default.md
-    - Split Services Deployment: deployment-split.md
+    - Deployment: 
+      - General: deployment-general.md
+      - Scenarios:
+        - Default: deployment-default.md
+        - Split Services: deployment-split.md
+    - Access VIAME-Web: deployment-access.md
   - Support: support.md

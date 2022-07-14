@@ -31,6 +31,14 @@ done
 # Update VM
 sudo apt-get update
 
+# If full deployment, allow TCP forwarding
+if [ -z "$WEB_INTERNAL_IP" ]
+then
+  sudo sed -i \
+    's/AllowTcpForwarding no/#AllowTcpForwarding no\nAllowTcpForwarding yes/1' \
+    /etc/ssh/sshd_config
+fi
+
 # Install nvidia 470 driver. Reply 'no' to PAM overwrite prompt
 # https://cloud.google.com/compute/docs/gpus/install-drivers-gpu#secure-boot
 NVIDIA_DRIVER_VERSION=$(sudo apt-cache search 'linux-modules-nvidia-[0-9]+-gcp$' | awk '{print $1}' | sort | tail -n 1 | head -n 1 | awk -F"-" '{print $4}')

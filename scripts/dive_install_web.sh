@@ -3,13 +3,18 @@
 # Provision a VM to be used as the web node for the DIVE service
 
 WEB_INTERNAL_IP=$1
-if [ -z "$WEB_INTERNAL_IP"]
+if [ -z "$WEB_INTERNAL_IP" ]
 then
   echo "No WEB_INTERNAL_IP was supplied as argument 1"
   exit 1
 fi
 
 sudo apt-get update
+
+# Allow TCP Forwarding
+sudo sed -i \
+  's/AllowTcpForwarding no/#AllowTcpForwarding no\nAllowTcpForwarding yes/1' \
+  /etc/ssh/sshd_config
 
 # Prep directory
 DIVE_DIR=/opt/noaa
