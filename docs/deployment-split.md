@@ -1,6 +1,6 @@
 # Split Services Deployment
 
-NOTE: Be sure to first read the [Deployment Overview](deployment-overview.md) and [General](deployment-general.md) deployment instructions.
+NOTE: Be sure to first read the [General](deployment-general.md) deployment instructions.
 
 These instructions are for splitting VIAME-Web web and worker services across two VMs: a compute-only web VM for annotations, and a worker VM with one or more GPUs that can be turned on as needed to run jobs. This is a cost-effective solution, as the (expensive) worker VM is only turned on as needed. See the DIVE [docs](https://kitware.github.io/dive/Deployment-Docker-Compose/#splitting-services) for more details. For running VIAME-Web on s single VM, see the [Default Deployment](deployment-default.md).
 
@@ -138,7 +138,7 @@ netstat -plaunt
 
 # Get the internal IP of the web VM from the third block in the output
 ifconfig
-````
+```
 
 2) SSH into the worker VM and check if the VM can make a connection to the web VM on the expected ports. These commands should output a string like `Connection to ##.##.##.## 8010 port [tcp/*] succeeded!`. If the worker VM cannot make a connection to the web VM, then you will get a 'operation timed out' message.
 
@@ -147,4 +147,4 @@ WEB_IP=##.##.##.##
 nc -v -w3 $WEB_IP 8010
 nc -v -w3 $WEB_IP 5672
 
-````
+```

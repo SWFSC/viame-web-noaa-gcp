@@ -6,7 +6,7 @@ hide:
 
 # Support
 
-See DIVE [Frequently Asked Questions](https://kitware.github.io/dive/FAQ/)
+See [DIVE Frequently Asked Questions](https://kitware.github.io/dive/FAQ/)
 
 For support regarding the use of VIAME-Web, see the [DIVE User Guide](https://kitware.github.io/dive). 
 

@@ -1,6 +1,6 @@
 # Default Deployment
 
-NOTE: Be sure to first read the [Deployment Overview](deployment-overview.md) and [General](deployment-general.md) deployment instructions.
+NOTE: Be sure to first read the [General](deployment-general.md) deployment instructions.
 
 These instructions are for a single VM with at least one GPU, meaning all operations (annotation, training, etc.) will happen on this VM. For hybrid options, e.g., a low-cost compute VM paired with a worker VM with GPUs, see [Split Services](deployment-split.md).
 

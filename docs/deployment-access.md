@@ -4,7 +4,7 @@ The services (Docker containers) installed on the VM(s) must be running to acces
 
 ## Run Startup Scripts
 
-These commands to start the services can be run from Cloud Shell or a local shell with [Google Cloud CLI installed](deployment-overview.md) (i.e., a Cloud SDK shell).
+These commands to start the services can be run from Cloud Shell or a local shell with [Google Cloud CLI installed](deployment-general.md) (i.e., a Cloud SDK shell).
 
 Note that for other users to run the startup script, they must have permission to run `docker-compose` on the VM. To allow this, you can add users to the docker group. See [manage docker as a non-root user](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) for details.
 

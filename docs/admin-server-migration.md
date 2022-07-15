@@ -28,6 +28,6 @@ The [docker official docs](https://docs.docker.com/storage/volumes/#backup-resto
 
 ## Worker VM
 
-If using the [split services deployment](deployment-split.md), no user data are stored on the worker VM and thus the worker VM can safely be destroyed and recreated within your GCP project. Follow the [worker deployment](deployment-split.md/#worker-vm) instructions to deploy and provision the worker. Be sure to provide the correct IP for the web VM. 
+If using the [split services deployment](deployment-split.md), no user data are stored on the worker VM and thus the worker VM can safely be destroyed and recreated within your GCP project. Follow the [worker deployment](deployment-split.md/worker-vm) instructions to deploy and provision the worker. Be sure to provide the correct IP for the web VM. 
 
 Note that if you do destroy and recreate the worker, you will have to re-download any [VIAME addons](https://kitware.github.io/dive/Deployment-Docker-Compose/#addon-management).

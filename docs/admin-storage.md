@@ -4,7 +4,7 @@ This guide details how to store your imagery in a GCS bucket and mirror that tha
 
 ## Setup
 
-This section expands on the DIVE [Cloud Storage Integration docs](https://kitware.github.io/dive/Deployment-Storage).
+This section expands on the [DIVE Cloud Storage Integration docs](https://kitware.github.io/dive/Deployment-Storage).
 
 ### Creating access credentials
 
@@ -36,7 +36,9 @@ To make these data broadly accessible to the users of your deployment, create a 
 For users to be able to annotate images from the mounted bucket, you must give them edit permissions on the collection. To give a user permission to annotate any images in the collection: 
 
 1) Click into the collection, click 'Actions', and select 'Access control'. 
+
 2) Add users as editors as appropriate and select 'Also set permissions on all subfolders to match this collection's permissions'. 
+
 3) Click 'Save'.
 
 You can also specify more granular levels of permissions as appropriate.
