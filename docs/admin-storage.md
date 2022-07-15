@@ -8,7 +8,7 @@ This section expands on the DIVE [Cloud Storage Integration docs](https://kitwar
 
 ### Creating access credentials
 
-Follow the DIVE [Creating access credentials instructions](https://kitware.github.io/dive/Deployment-Storage/#creating-access-credentials). You should already have created the service account during [deployment](deployment-general.md/#create-gcp-resources). You must create an access key for the same service account that is attached to your VM(s).
+Follow the DIVE [Creating access credentials instructions](https://kitware.github.io/dive/Deployment-Storage/#creating-access-credentials). You should already have created the service account during [deployment](deployment-general.md#create-gcp-resources). You must create an access key for the same service account that is attached to your VM(s).
 
 ### Setting up CORS
 
