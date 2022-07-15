@@ -6,11 +6,11 @@ This page provides a summary of recommended best practices for managing your own
 
 Keeping your deployment up to date is crucial for getting the latest VIAME-Web features and bug fixes, as well as for debugging purposes. It is strongly recommended that you update your images at least once per week.
 
-The DIVE startup scripts that are created on your VMs during deployment provisioning include `docker-compose pull` calls that will update the containers installed on your VM(s) to the `latest` images. Thus, these containers will be updated every time you run the startup script. Depending on your [VM management strategy](admin-general.md#vm_management) this may be sufficient, particularly if you turn off your VM(s) at least once per week.
+The DIVE startup scripts that are created on your VMs during deployment provisioning include `docker-compose pull` calls that will update the containers installed on your VM(s) to the `latest` images. Thus, these containers will be updated every time you run the startup script. Depending on your [VM management strategy](vm-management) this may be sufficient, particularly if you turn off your VM(s) at least once per week.
 
 If your VM (default or web) will be on at all times, you should consider the [Production deployment](https://kitware.github.io/dive/Deployment-Docker-Compose/#production-deployment) options.
 
-Note that keeping images up to date will not update canned VIAME addons. See [Addon Management](admin-general.md#addon_management) for details on updating VIAME addons.
+Note that keeping images up to date will not update canned VIAME addons. See [Addon Management](#addon-management) for details on updating VIAME addons.
 
 ## Data backup
 

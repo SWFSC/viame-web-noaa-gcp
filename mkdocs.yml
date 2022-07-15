@@ -7,8 +7,6 @@ repo_url: https://github.com/smwoodman/viame-web-fisheries-cloud
 theme:
   name: material
   highlightjs: true
-#   palette:
-#     primary: black
   features:
     - navigation.tabs
     - navigation.tabs.sticky
@@ -16,22 +14,9 @@ theme:
 
 # extra_css: [extra.css]
 
-# extra:
-#   social:
-#     - icon: fontawesome/brands/github
-#       link: https://github.com/kitware/dive
-#     - icon: fontawesome/brands/docker
-#       link: https://hub.docker.com/r/kitware/viame-web
-#     - icon: fontawesome/brands/discourse
-#       link: https://discourse.kitware.com/c/viame-dive/17
-#   analytics:
-#     provider: google
-#     property: UA-6042509-43
-
 nav:
-  - General: 
+  - Home: 
     - Home: index.md
-    - Network Changes: network-changes.md
   - Deployment Guide: 
     - Deployment: 
       - General: deployment-general.md
@@ -39,6 +24,7 @@ nav:
         - Default: deployment-default.md
         - Split Services: deployment-split.md
     - Accessing VIAME-Web: deployment-access.md
+    - Network Changes: network-changes.md
   - Administrator Guide:
     - General: admin-general.md
     - Cloud Storage Integration: admin-storage.md
