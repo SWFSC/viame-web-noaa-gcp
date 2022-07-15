@@ -40,7 +40,7 @@ nav:
         - Split Services: deployment-split.md
     - Accessing VIAME-Web: deployment-access.md
   - Administrator Guide:
-    - Best Practices: admin-updating.md
+    - Best Practices: admin-best-practices.md
     - Cloud Storage Integration: admin-storage.md
     - Other: admin-other.md
   - Support: support.md
