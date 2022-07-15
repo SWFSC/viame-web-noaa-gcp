@@ -10,17 +10,17 @@ Migrating to a different server should be as easy as copying a few directories f
 
 1) Run (`docker-compose down`) to stop the service.
 
-2) Put the following directories in the same place on the new server.
+2) Put the following directories in the same place on the new server:
 
-	* /var/lib/docker/volumes/dive_addons
-	* /var/lib/docker/volumes/dive_girder_assetstore
-	* /var/lib/docker/volumes/dive_mongo_db
+* /var/lib/docker/volumes/dive_addons
+* /var/lib/docker/volumes/dive_girder_assetstore
+* /var/lib/docker/volumes/dive_mongo_db
 
 3) Tell the new server's docker metadata about the new volumes:
 
-	* `docker volume create dive_addons`
-	* `docker volume create dive_girder_assetstore`
-	* `docker volume create dive_mongo_db`
+* `docker volume create dive_addons`
+* `docker volume create dive_girder_assetstore`
+* `docker volume create dive_mongo_db`
 
 4) Run `docker-compose up` on the new server.
 
