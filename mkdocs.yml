@@ -33,17 +33,14 @@ nav:
     - Home: index.md
     - Network Changes: network-changes.md
   - Deployment Guide: 
-    - Overview: deployment-overview.md
     - Deployment: 
       - General: deployment-general.md
       - Scenarios:
         - Default: deployment-default.md
         - Split Services: deployment-split.md
-    - Access VIAME-Web: deployment-access.md
+    - Accessing VIAME-Web: deployment-access.md
   - Administrator Guide:
-    - Overview: admin-overview.md
-    - Destroying and Recreating VMs: admin-resources.md
-    - Starting Services: admin-startup.md
-    - Server Branding Config: admin-branding.md
-    - Staying Up to Date: admin-updating.md
+    - Best Practices: admin-updating.md
+    - Cloud Storage Integration: admin-storage.md
+    - Other: admin-other.md
   - Support: support.md
