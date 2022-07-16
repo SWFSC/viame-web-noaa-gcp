@@ -18,7 +18,7 @@ Within GCP, you can create a [Snapshot Schedule](https://cloud.google.com/comput
 
 ### Sample Terraform Block
 
-```terraform
+``` terraform
 # NOTE: to add disk to this snapshot schedule:
 #   1) Create the snapshot schedule as here
 #   a) Add the disk to the snapshot schedule using gcloud commands or the Console
@@ -59,7 +59,7 @@ If you have a split services deployment, an example schedule might be leaving th
 
 This block creates an instance schedule to stop an instance at 2300, LA time, every Friday.
 
-```terraform
+``` terraform
 # NOTE: To add a VM to this schedule without destroying and recreating them:
 #   1) create the google_compute_resource_policy resource
 #   2) Add the VM to the instance schedule using gcloud or the Console
@@ -80,11 +80,11 @@ resource "google_compute_resource_policy" "viame_web_stop" {
 
 ## Addon Management
 
-To download and scan for VIAME addons, such as canned pipelines, see the DIVE [Addon Management docs](https://kitware.github.io/dive/Deployment-Docker-Compose/#addon-management).
+To download and scan for VIAME addons, such as canned pipelines, see the [DIVE Addon Management docs](https://kitware.github.io/dive/Deployment-Docker-Compose/#addon-management).
 
 ## Server Branding Config
 
-For information on how to configure the brand and messaging that appears in various places in the DIVE Web UI, see the DIVE [Server Branding Config docs](https://kitware.github.io/dive/Deployment-Docker-Compose/#server-branding-config).
+For information on how to configure the brand and messaging that appears in various places in the DIVE Web UI, see the [DIVE Server Branding Config docs](https://kitware.github.io/dive/Deployment-Docker-Compose/#server-branding-config).
 
 ## Storing imagery
 

@@ -1,6 +1,6 @@
 # Fisheries Cloud Network Changes
 
-Deploying an instance of VIAME-Web requires several configuration changes within the GCP project. These changes can be requested by submitting a [System Change Request](https://docs.google.com/forms/d/e/1FAIpQLSdafnuc7bxEIFkXrPpHkwgy1VxoiGEkMVkZjbMe1DdMYJ9THw/viewform) (SCR). 
+Deploying an instance of VIAME-Web requires several configuration changes within your GCP project. These changes can be requested by submitting a [System Change Request](https://docs.google.com/forms/d/e/1FAIpQLSdafnuc7bxEIFkXrPpHkwgy1VxoiGEkMVkZjbMe1DdMYJ9THw/viewform) (SCR). 
 
 * To be able to access this web service, the SSH server's configuration (file: /etc/ssh/sshd_config) needs to include AllowTCPForwarding=yes. However, this is a baseline setting (specifically, "CIS Benchmarks for Ubuntu Linux 20.04 LTS v1.1.0" Server Level 2 - 5.3.20 "Ensure SSH AllowTcpForwarding is disabled"), and thus this config change must be approved by NMFS CCB on an per-instance basis. The viame-web-fisheries-cloud install scripts change this setting as necessary when the machines are being provisioned, and thus you only need to follow the deployment isntructions once you have received approval to use this setting.
 

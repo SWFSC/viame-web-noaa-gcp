@@ -12,7 +12,7 @@ To create a single VM for an instance of VIAME-Web, create a VM with at least on
 
 Your Terraform code for the VM may look similar to the below. Be sure to rename resources and variables as appropriate for your project.
 
-```terraform
+``` terraform
 module "gce-viame-web" {
   source = "~/viame-web-fisheries-cloud"
 
@@ -37,7 +37,7 @@ module "gce-viame-web" {
 
 Once you have created the VM, set variables in your Cloud Shell session that will be used throughout. Then, download the install script to the VM, make it executable, and then run the install script from within the VM. Respond 'no' to the PAM overwrite question. Note that the install script must be run from within the VM, i.e., after ssh'ing into the VM, to effectively respond to the PAM question.
 
-```shell
+``` bash
 ZONE=us-east4-b
 INSTANCE_NAME=viame-web-amlr
 REPO_URL=https://raw.githubusercontent.com/smwoodman/viame-web-fisheries-cloud/scripts
@@ -55,7 +55,7 @@ exit #to exit the VM, after the script completes
 
 Because of permissions changes and installing the NVIDIA drivers, the VM must now be restarted. While you can restart the VM from the console, it is generally easiest to run the following from Cloud Shell to 1) restart the VM and 2) run the startup script to pull updated files and spin up the VIAME-Web stack:
 
-```shell
+``` bash
 gcloud compute instances stop $INSTANCE_NAME --zone=$ZONE && \
   gcloud compute instances start $INSTANCE_NAME --zone=$ZONE && \
   gcloud compute ssh $INSTANCE_NAME --zone=$ZONE --command="/opt/noaa/dive_startup_full.sh"

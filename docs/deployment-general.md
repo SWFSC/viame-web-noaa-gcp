@@ -23,7 +23,7 @@ These steps apply to both deployment scenarios. Unless otherwise specified, thes
 
 It is recommended to clone the [viame-web-fisheries-cloud repo](https://github.com/smwoodman/viame-web-fisheries-cloud) in the home directory of your Cloud Shell to 1) use the module and 2) so that relative paths match these instructions.
 
-```shell
+``` bash
 # from your cloud shell
 git clone https://github.com/smwoodman/viame-web-fisheries-cloud.git
 ```
@@ -36,7 +36,7 @@ Both scenarios require many of the same resources, including: a GCS bucket in wh
 
 Be sure to rename resources and variables as appropriate for your project.
 
-```terraform
+``` terraform
 # Define variables and provider
 variable "project" { 
     type    = string
