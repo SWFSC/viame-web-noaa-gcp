@@ -4,7 +4,7 @@ Within GCP you may need to move to a new project, to resize a disk, or to use a 
 
 ## Default and Web VM
 
-The default and web VMs both store user data, and thus care should be taken before destroying these VMs. If these resources do need to be destroyed and recreated, e.g., to move from a Dev to a Prod project, then you can either a) restore a snapshot (link todo) or b) follow the instructions below to avoid losing any user data.
+The default and web VMs both store user data, and thus care should be taken before destroying these VMs. If these resources do need to be destroyed and recreated, e.g., to move from a Dev to a Prod project, then you can either a) [restore a snapshot](https://cloud.google.com/compute/docs/disks/restore-snapshot) or b) follow the instructions below to avoid losing any user data.
 
 Migrating to a different server should be as easy as copying a few directories from the web server node (web VM).  Everything is in /var/lib/docker/volumes (assuming you haven't modified the "data-root" in /etc/docker/daemon.json).
 
@@ -23,6 +23,6 @@ The [docker official docs](https://docs.docker.com/storage/volumes/#backup-resto
 
 ## Worker VM
 
-If using the [split services deployment](deployment-split.md), no user data are stored on the worker VM and thus the worker VM can safely be destroyed and recreated within your GCP project. Follow the [worker deployment](deployment-split.md/worker-vm) instructions to deploy and provision the worker. Be sure to provide the correct IP for the web VM. 
+If using the [split services deployment](deployment-split.md), no user data are stored on the worker VM and thus the worker VM can safely be destroyed and recreated within your GCP project. Follow the [worker deployment](deployment-split.md#worker-vm) instructions to deploy and provision the worker. Be sure to provide the correct IP for the web VM. 
 
 Note that if you do destroy and recreate the worker, you will have to re-download any [VIAME addons](https://kitware.github.io/dive/Deployment-Docker-Compose/#addon-management).

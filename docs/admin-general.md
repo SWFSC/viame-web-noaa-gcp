@@ -14,7 +14,9 @@ Note that keeping images up to date will not update canned VIAME addons. See [Ad
 
 ## Data backup
 
-Within GCP, you can create a [Snapshot Schedule](https://cloud.google.com/compute/docs/disks/scheduled-snapshots) to create snapshot backups of your disk(s). 
+Data in GCS Storage buckets are quite [durable](https://cloud.google.com/blog/products/storage-data-transfer/understanding-cloud-storage-11-9s-durability-target). See the [GCS Storage docs](https://cloud.google.com/storage/docs) for more details about data redundancy, versioning, etc.
+
+You can create a GCP [Snapshot Schedule](https://cloud.google.com/compute/docs/disks/scheduled-snapshots) to create snapshot backups of your disk(s). 
 
 ### Sample Terraform Block
 
