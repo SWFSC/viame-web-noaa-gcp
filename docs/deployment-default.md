@@ -6,32 +6,7 @@ These instructions are for a single VM with at least one GPU, meaning all operat
 
 ## Create GCP Resources
 
-To create a single VM for an instance of VIAME-Web, create a VM with at least one GPU using the 'viame-web-fisheries-cloud' module. Be sure to provide a non-zero value for gpu_count. 
-
-### Sample Terraform Block
-
-Your Terraform code for the VM may look similar to the below. Be sure to rename resources and variables as appropriate for your project.
-
-``` terraform
-module "gce-viame-web" {
-  source = "~/viame-web-fisheries-cloud"
-
-  name = "viame-web"
-  zone = var.zone
-
-  machine_type = "n1-standard-4"
-  image = data.google_compute_image.nmfs_hardened_image.self_link
-  disk_size = 300
-  gpu_type  = "nvidia-tesla-t4"
-  gpu_count = 1
-  deletion_protection = true
-
-  subnetwork_project = var.subnetwork_project
-  subnetwork = var.subnetwork
-  tags = ["allow-ssh", "allow-outbound-nat-primary", "allow-outbound-nat-secondary"]
-  sa_email = google_service_account.vm_sa1.email
-}
-```
+To create a single VM for an instance of VIAME-Web, create a VM with at least one GPU using the 'viame-web-fisheries-cloud' module. Be sure to provide a non-zero value for gpu_count. [Contact Sam](support.md) for sample Terraform code.
 
 ## Provision GCP VM
 

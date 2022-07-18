@@ -6,50 +6,7 @@ These instructions are for splitting VIAME-Web web and worker services across tw
 
 ## Create GCP Resources
 
-To create two VMs for a split services instance of VIAME-Web, create two VMs: a web and a worker. The infrastructure of the web and worker VMs should be identical, except that the web node will have no GPU, should have a slightly larger disk capacity, and needs SSH AllowTcpForwarding to be enabled. Use the 'viame-web-fisheries-cloud' module to create these VMs. 
-
-### Sample Terraform Block
-
-Your Terraform code for the VMs may look similar to the below. Be sure to rename resources and variables as appropriate for your project.
-
-``` terraform
-module "gce-viame-web-web" {
-  source = "~/viame-web-fisheries-cloud"
-
-  name = "viame-web-web"
-  zone = var.zone
-
-  machine_type = "e2-standard-2"
-  image = data.google_compute_image.nmfs_hardened_image.self_link
-  disk_size = 300
-  gpu_count = 0
-  deletion_protection = true
-
-  subnetwork_project = var.subnetwork_project
-  subnetwork = var.subnetwork
-  tags = ["allow-ssh", "allow-outbound-nat-primary", "allow-outbound-nat-secondary", "viame-tag"]
-  sa_email = google_service_account.vm_sa1.email
-}
-
-module "gce-viame-web-worker" {
-  source = "~/viame-web-fisheries-cloud"
-
-  name = "viame-web-worker"
-  zone = var.zone
-
-  machine_type = "n1-standard-4"
-  image = data.google_compute_image.nmfs_hardened_image.self_link
-  disk_size = 200
-  gpu_type  = "nvidia-tesla-t4"
-  gpu_count = 1
-  deletion_protection = true
-
-  subnetwork_project = var.subnetwork_project
-  subnetwork = var.subnetwork
-  tags = ["allow-ssh", "allow-outbound-nat-primary", "allow-outbound-nat-secondary", "viame-tag"]
-  sa_email = google_service_account.vm_sa1.email
-}
-```
+To create two VMs for a split services instance of VIAME-Web, create two VMs: a web and a worker. The infrastructure of the web and worker VMs should be identical, except that the web node will have no GPU, should have a slightly larger disk capacity, and needs SSH AllowTcpForwarding to be enabled. Use the 'viame-web-fisheries-cloud' module to create these VMs. [Contact Sam](support.md) for sample Terraform code.
 
 ## Provision GCP VMs
 
