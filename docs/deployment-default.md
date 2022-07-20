@@ -15,7 +15,7 @@ To create a single VM for an instance of VIAME-Web, create a VM with at least on
 Once you have created the VM, set variables in your Cloud Shell session that will be used throughout. Then, download the install script to the VM, make it executable, and then run the install script from within the VM. Respond 'no' to the PAM overwrite question. Note that the install script must be run from within the VM, i.e., after ssh'ing into the VM, to effectively respond to the PAM question. Running this install script may take 10-15 minutes.
 
 ``` bash
-ZONE=us-east4-b
+ZONE=us-east4-c
 INSTANCE_NAME=viame-web
 REPO_URL=https://raw.githubusercontent.com/smwoodman/viame-web-fisheries-cloud/main/scripts
 

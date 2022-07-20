@@ -17,7 +17,7 @@ Use the 'viame-web-fisheries-cloud' module to create these VMs. The [source path
 First, we set the variables in Cloud Shell that will be used throughout. Note that both install scripts require the internal IP of the web node.
 
 ``` bash
-ZONE=us-east4-b
+ZONE=us-east4-c
 INSTANCE_NAME_WEB=viame-web-web
 INSTANCE_NAME_WORKER=viame-web-worker
 REPO_URL=https://raw.githubusercontent.com/smwoodman/viame-web-fisheries-cloud/main/scripts
@@ -78,7 +78,7 @@ See [Access VIAME-Web](deployment-access.md)
 
 ## Web and Worker VM Communication
 
-For the split services to be able to work, the web and worker VMs must be able to communicate. You can confirm this either through either the DIVE API (recommended) or the VMs directly. Before testing the connection, be sure both the web and worker VMs are on and the services have been started (i.e., the startup scripts have been run). 
+For the split services to be able to work, the web and worker VMs must be able to communicate. You can confirm this either through either the DIVE API (recommended) or the VMs directly. Before testing the connection, be sure that 1) both the web and worker VMs are on and the services have been started (i.e., the startup scripts have been run) and 2) both VMs have the your [viame network tag](network-changes.md) applied. 
 
 ### DIVE API
 
