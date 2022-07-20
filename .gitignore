@@ -29,3 +29,4 @@ override.tf.json
 # example: *tfplan*
 
 viame-web-fisheries-cloud-sample.tf
+pubsub-try.sh
