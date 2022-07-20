@@ -17,7 +17,7 @@ Use the 'viame-web-fisheries-cloud' module to create these VMs. The [source path
 First, we set the variables in Cloud Shell that will be used throughout. Note that both install scripts require the internal IP of the web node.
 
 ``` bash
-ZONE=us-east4-c
+ZONE=us-east4-b
 INSTANCE_NAME_WEB=viame-web-web
 INSTANCE_NAME_WORKER=viame-web-worker
 REPO_URL=https://raw.githubusercontent.com/smwoodman/viame-web-fisheries-cloud/main/scripts
