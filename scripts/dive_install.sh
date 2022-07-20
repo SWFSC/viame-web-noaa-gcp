@@ -55,14 +55,14 @@ chmod 755 $DIVE_DIR
 cd $DIVE_DIR
 
 # Get startup script
-GH_URL=https://raw.githubusercontent.com/us-amlr/amlr-gcp-terraform/main/modules/dive
+REPO_URL=https://raw.githubusercontent.com/smwoodman/viame-web-fisheries-cloud/main/scripts
 if [ -z "$WEB_INTERNAL_IP" ]
 then
   STARTUP_NAME=dive_startup_full.sh
 else
   STARTUP_NAME=dive_startup_worker.sh
 fi
-curl -L $GH_URL/$STARTUP_NAME -o $DIVE_DIR/$STARTUP_NAME
+curl -L $REPO_URL/$STARTUP_NAME -o $DIVE_DIR/$STARTUP_NAME
 chmod 755 $DIVE_DIR/$STARTUP_NAME
 
 # Clone dive

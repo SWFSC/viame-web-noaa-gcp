@@ -37,4 +37,6 @@ Now that you have provisioned and restarted the VM(s), you can almost access the
 gcloud compute ssh $INSTANCE_NAME --zone=$ZONE -- -N -L 8010:localhost:8010
 ```
 
+If on a Windows, the first time you run this command you likely will get a Putty popup 
+
 You should now be able to access the VIAME-Web instance (the web service) at <http://localhost:8010>, as described in the [DIVE docs](https://kitware.github.io/dive/Deployment-Docker-Compose/#basic-deployment).

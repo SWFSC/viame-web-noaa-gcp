@@ -24,7 +24,8 @@ sudo chown $USER $DIVE_DIR
 chmod 755 $DIVE_DIR
 cd $DIVE_DIR
 
-curl -L https://raw.githubusercontent.com/us-amlr/amlr-gcp-terraform/main/modules/dive/dive_startup_web.sh -o $DIVE_DIR/dive_startup_web.sh
+REPO_URL=https://raw.githubusercontent.com/smwoodman/viame-web-fisheries-cloud/main/scripts
+curl -L $REPO_URL/dive_startup_web.sh -o $DIVE_DIR/dive_startup_web.sh
 chmod 755 $DIVE_DIR/dive_startup_web.sh
 
 git clone https://github.com/kitware/dive

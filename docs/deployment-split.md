@@ -6,17 +6,21 @@ These instructions are for splitting VIAME-Web web and worker services across tw
 
 ## Create GCP Resources
 
-To create two VMs for a split services instance of VIAME-Web, create two VMs: a web and a worker. The infrastructure of the web and worker VMs should be identical, except that the web node will have no GPU, should have a slightly larger disk capacity, and needs SSH AllowTcpForwarding to be enabled. Use the 'viame-web-fisheries-cloud' module to create these VMs. [Contact Sam](support.md) for sample Terraform code.
+To create two VMs for a split services instance of VIAME-Web, create two VMs: a web and a worker. The infrastructure of the web and worker VMs should be identical, except that the web node will have no GPU, should have a slightly larger disk capacity, and needs SSH AllowTcpForwarding to be enabled. 
+
+Use the 'viame-web-fisheries-cloud' module to create these VMs. The [source path](https://www.terraform.io/language/modules/sources) to this module can either be relative (e.g., '../viame-web-fisheries-cloud') or an unprefixed `github.com` URL (e.g., 'github.com/smwoodman/viame-web-fisheries-cloud').
+
+[Contact Sam](support.md) for sample Terraform code.
 
 ## Provision GCP VMs
 
 First, we set the variables in Cloud Shell that will be used throughout. Note that both install scripts require the internal IP of the web node.
 
 ``` bash
-ZONE=us-east4-b
-INSTANCE_NAME_WEB=viame-web-amlr-web
-INSTANCE_NAME_WORKER=viame-web-amlr-worker
-REPO_URL=https://raw.githubusercontent.com/smwoodman/viame-web-fisheries-cloud/scripts
+ZONE=us-east4-c
+INSTANCE_NAME_WEB=viame-web-web
+INSTANCE_NAME_WORKER=viame-web-worker
+REPO_URL=https://raw.githubusercontent.com/smwoodman/viame-web-fisheries-cloud/main/scripts
 WEB_INTERNAL_IP=$(gcloud compute instances describe $INSTANCE_NAME_WEB --zone=$ZONE --format='get(networkInterfaces[0].networkIP)')
 ```
 
@@ -42,7 +46,7 @@ gcloud compute ssh $INSTANCE_NAME_WEB --zone=$ZONE --command="/opt/noaa/dive_sta
 
 ### Worker VM
 
-Next, provision the worker. Download the install script to the VM, make it executable, and then run the install script from within the VM. Respond 'no' to the PAM overwrite question.
+Next, provision the worker. Download the install script to the VM, make it executable, and then run the install script from within the VM. Respond 'no' to the PAM overwrite question. Running this install script may take 10-15 minutes.
 
 For the internal IP of the web node, you can either copy internal IP of the web node and past it into the command, or set the variables from above within the worker VM to be able to use WEB_INTERNAL_IP.
 
