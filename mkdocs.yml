@@ -15,8 +15,7 @@ theme:
 # extra_css: [extra.css]
 
 nav:
-  - Home: 
-    - Home: index.md
+  - Home: index.md
   - Deployment Guide: 
     - Deployment: 
       - General: deployment-general.md

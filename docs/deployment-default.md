@@ -8,7 +8,7 @@ These instructions are for a single VM with at least one GPU, meaning all operat
 
 To create a single VM for an instance of VIAME-Web, create a VM with at least one GPU using the 'viame-web-fisheries-cloud' module. The [source path](https://www.terraform.io/language/modules/sources) to this module can either be relative (e.g., '../viame-web-fisheries-cloud') or an unprefixed `github.com` URL (e.g., 'github.com/smwoodman/viame-web-fisheries-cloud'). Be sure to provide a non-zero value for gpu_count. 
 
-[Contact Sam](support.md) for sample Terraform code.
+[See here](https://drive.google.com/file/d/1aD1sjUx3M4AMGAi-o57V--xu1HfKxEy5/view?usp=sharing) for sample Terraform code for a VM for a default deployment.
 
 ## Provision GCP VM
 

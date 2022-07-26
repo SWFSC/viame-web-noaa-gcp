@@ -18,7 +18,7 @@ Data in GCS Storage buckets are quite [durable](https://cloud.google.com/blog/pr
 
 You can create a GCP [Snapshot Schedule](https://cloud.google.com/compute/docs/disks/scheduled-snapshots) to create snapshot backups of your disk(s). 
 
-[Contact Sam](support.md) for sample Terraform code.
+[See here](https://drive.google.com/file/d/17JZZZZtXxhGprYY3FbVZ2HzQXszaM3eO/view?usp=sharing) for sample Terraform code and instructions.
 
 ## VM management
 
@@ -26,7 +26,7 @@ Your VM schedule, i.e., when your VMs are on (and incurring more costs) and when
 
 If you have a split services deployment, an example schedule might be leaving the web VM during the work week, with an [Instance Schedule](https://cloud.google.com/compute/docs/instances/schedule-instance-start-stop) set to turn it off on Friday evening, and turning the worker on and off as needed to run jobs. This would minimize users needing to turn on the web VM (or turning it off while another user is annotating), which also only having the worker VM on when necessary. Recent DIVE [feature additions](https://github.com/Kitware/dive/issues/1260) allow all users to see the status of the job queue so they know if someone else is currently running a job.
 
-[Contact Sam](support.md) for sample Terraform code.
+[See here](https://drive.google.com/file/d/17JZZZZtXxhGprYY3FbVZ2HzQXszaM3eO/view?usp=sharing) for sample Terraform code and instructions.
 
 ## Addon Management
 

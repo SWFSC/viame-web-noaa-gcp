@@ -34,4 +34,4 @@ Both scenarios require many of the same resources, including: a GCS bucket in wh
 
 Note that there might be a delay between a VM has been created and/or started, and when you can run an install or startup script. If you get an error, please wait a few minutes and try to run the command again.
 
-[Contact Sam](support.md) for sample Terraform code.
+[See here](https://drive.google.com/file/d/16vJPK8ikKm5QlPcrcWciJhXOGvGN6jTa/view?usp=sharing) for sample Terraform code for general resources.
