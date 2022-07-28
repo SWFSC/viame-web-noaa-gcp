@@ -1,8 +1,8 @@
-site_name: DIVE-NOAA-GCP
-site_url: https://smwoodman.github.io/viame-web-fisheries-cloud
+site_name: VIAME-Web-NOAA-GCP
+site_url: https://us-amlr.github.io/viame-web-noaa-gcp
 site_author: Sam Woodman
 
-repo_url: https://github.com/smwoodman/viame-web-fisheries-cloud
+repo_url: https://github.com/us-amlr/viame-web-noaa-gcp
 
 theme:
   name: material
