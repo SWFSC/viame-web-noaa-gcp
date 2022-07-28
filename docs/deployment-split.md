@@ -10,7 +10,7 @@ To create two VMs for a split services instance of VIAME-Web, create two VMs: a 
 
 Use the 'viame-web-fisheries-cloud' module to create these VMs. The [source path](https://www.terraform.io/language/modules/sources) to this module can either be relative (e.g., '../viame-web-fisheries-cloud') or an unprefixed `github.com` URL (e.g., 'github.com/smwoodman/viame-web-fisheries-cloud').
 
-[See here](https://drive.google.com/file/d/1aD1sjUx3M4AMGAi-o57V--xu1HfKxEy5/view?usp=sharing) for sample Terraform code for the VMs for a split services deployment.
+[See here](https://drive.google.com/file/d/1aD1sjUx3M4AMGAi-o57V--xu1HfKxEy5/view?usp=sharing) for a Terraform code template for the VMs for a split services deployment.
 
 ## Provision GCP VMs
 
