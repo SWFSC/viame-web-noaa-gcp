@@ -4,7 +4,7 @@ hide:
   - table_of_contents
 ---
 
-# Home
+# VIAME-Web NOAA GCP Deployment Documentation
 
 The site details how to deploy and manage an instance of VIAME-Web on a NOAA Fisheries-hardened virtual machine (VM) in a [GCP Project](https://sites.google.com/noaa.gov/fisheriescloudservices/home) within the [NOAA Fisheries Cloud](https://sites.google.com/noaa.gov/nmfs-hq-ocio-cloud-portal/home). 
 
