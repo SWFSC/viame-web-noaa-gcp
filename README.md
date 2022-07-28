@@ -1,7 +1,7 @@
 # viame-web-noaa-gcp
 Deploy an instance of VIAME-Web in GCP in the NOAA Fisheries Cloud.
 
-See [repo docs](https://us-amlr.github.io/viame-web-noaa-gcp/) for deployment instructions.
+See the [repo docs](https://us-amlr.github.io/viame-web-noaa-gcp/) for deployment instructions.
 
 NOTE: This repo is currently under development. Please do not use without consultation with the author.
 
