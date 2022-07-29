@@ -1,4 +1,7 @@
 # viame-web-noaa-gcp
+
+[![DOI](https://zenodo.org/badge/513325539.svg)](https://zenodo.org/badge/latestdoi/513325539)
+
 Deploy an instance of VIAME-Web in GCP in the NOAA Fisheries Cloud.
 
 See the [repo docs](https://us-amlr.github.io/viame-web-noaa-gcp/) for deployment instructions.
@@ -10,6 +13,8 @@ This repo contains a module ([main.tf](main.tf)) for a GCP Compute Engine VM app
 ## Citation
 
 This repository can be cited as (preferred): 
+
+Woodman, S. Deploying VIAME-Web in GCP in the NOAA Fisheries Cloud [Computer software]. https://github.com/us-amlr/viame-web-noaa-gcp DOI: 10.5281/zenodo.6933654
 
 ## Disclaimer
 
