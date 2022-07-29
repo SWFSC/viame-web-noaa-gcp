@@ -1,10 +1,12 @@
 cff-version: 1.2.0
 title: 'Deploying VIAME-Web in GCP in the NOAA Fisheries Cloud'
 message: 'If you deploy using this repository or documentation, please cite as below'
-type: software
 authors:
   - given-names: Samuel
     family-names: Woodman
     email: sam.woodman@noaa.gov
     affiliation: 'NOAA SWFSC Antarctic Ecosystem Research Division'
     orcid: 'https://orcid.org/0000-0001-6071-8186'    
+doi: 10.5281/zenodo.6933654
+version: 0.1.0
+date-released: 2022-07-28
