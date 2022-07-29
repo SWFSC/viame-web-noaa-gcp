@@ -6,7 +6,7 @@ These instructions are for a single VM with at least one GPU, meaning all operat
 
 ## Create GCP Resources
 
-To create a single VM for an instance of VIAME-Web, create a VM with at least one GPU using the 'viame-web-fisheries-cloud' module. The [source path](https://www.terraform.io/language/modules/sources) to this module can either be relative (e.g., '../viame-web-fisheries-cloud') or an unprefixed `github.com` URL (e.g., 'github.com/smwoodman/viame-web-fisheries-cloud'). Be sure to provide a non-zero value for gpu_count. 
+To create a single VM for an instance of VIAME-Web, create a VM with at least one GPU using the 'viame-web-fisheries-cloud' module. The [source path](https://www.terraform.io/language/modules/sources) to this module can either be relative (e.g., '../viame-web-fisheries-cloud') or an unprefixed `github.com` URL (e.g., 'github.com/us-amlr/viame-web-noaa-gcp'). Be sure to provide a non-zero value for gpu_count. 
 
 [See here](https://drive.google.com/file/d/1aD1sjUx3M4AMGAi-o57V--xu1HfKxEy5/view?usp=sharing) for a Terraform code template for a VM for a default deployment.
 
@@ -17,7 +17,7 @@ Once you have created the VM, set variables in your Cloud Shell session that wil
 ``` bash
 ZONE=us-east4-c
 INSTANCE_NAME=viame-web
-REPO_URL=https://raw.githubusercontent.com/smwoodman/viame-web-fisheries-cloud/main/scripts
+REPO_URL=https://raw.githubusercontent.com/us-amlr/viame-web-noaa-gcp/main/scripts
 
 gcloud compute ssh $INSTANCE_NAME --zone=$ZONE \
   --command="curl -L $REPO_URL/dive_install.sh -o ~/dive_install.sh && chmod +x ~/dive_install.sh"
