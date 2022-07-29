@@ -8,7 +8,7 @@ These instructions are for splitting VIAME-Web web and worker services across tw
 
 To create two VMs for a split services instance of VIAME-Web, create two VMs: a web and a worker. The infrastructure of the web and worker VMs should be identical, except that the web node will have no GPU, should have a slightly larger disk capacity, and needs SSH AllowTcpForwarding to be enabled. 
 
-Use the 'viame-web-fisheries-cloud' module to create these VMs. The [source path](https://www.terraform.io/language/modules/sources) to this module can either be relative (e.g., '../viame-web-fisheries-cloud') or an unprefixed `github.com` URL (e.g., 'github.com/us-amlr/viame-web-noaa-gcp').
+Use the 'viame-web-noaa-gcp' module to create these VMs. The [source path](https://www.terraform.io/language/modules/sources) to this module can either be relative (e.g., '../viame-web-noaa-gcp') or an unprefixed `github.com` URL (e.g., 'github.com/us-amlr/viame-web-noaa-gcp').
 
 [See here](https://drive.google.com/file/d/1aD1sjUx3M4AMGAi-o57V--xu1HfKxEy5/view?usp=sharing) for a Terraform code template for the VMs for a split services deployment.
 

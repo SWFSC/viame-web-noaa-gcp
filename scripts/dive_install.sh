@@ -55,7 +55,7 @@ chmod 755 $DIVE_DIR
 cd $DIVE_DIR
 
 # Get startup script
-REPO_URL=https://raw.githubusercontent.com/smwoodman/viame-web-fisheries-cloud/main/scripts
+REPO_URL=https://raw.githubusercontent.com/us-amlr/viame-web-noaa-gcp/main/scripts
 if [ -z "$WEB_INTERNAL_IP" ]
 then
   STARTUP_NAME=dive_startup_full.sh

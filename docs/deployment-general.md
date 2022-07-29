@@ -21,11 +21,11 @@ These steps apply to both deployment scenarios. Unless otherwise specified, thes
 
 ## Clone Repository
 
-It is recommended to clone the [viame-web-fisheries-cloud repo](https://github.com/smwoodman/viame-web-fisheries-cloud) in the home directory of your Cloud Shell to 1) use the module and 2) so that relative paths match these instructions.
+It is recommended to clone the [viame-web-noaa-gcp repo](https://github.com/us-amlr/viame-web-noaa-gcp) in the home directory of your Cloud Shell to 1) use the module and 2) so that relative paths match these instructions.
 
 ``` bash
 # from your cloud shell
-git clone https://github.com/smwoodman/viame-web-fisheries-cloud.git
+git clone https://github.com/us-amlr/viame-web-noaa-gcp.git
 ```
 
 ## Create GCP Resources
