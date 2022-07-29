@@ -14,7 +14,7 @@ This repo contains a module ([main.tf](main.tf)) for a GCP Compute Engine VM app
 
 This repository can be cited as (preferred): 
 
-Woodman, S. Deploying VIAME-Web in GCP in the NOAA Fisheries Cloud [Computer software]. https://github.com/us-amlr/viame-web-noaa-gcp DOI: 10.5281/zenodo.6933654
+Woodman, S. (2022). Deploying VIAME-Web in GCP in the NOAA Fisheries Cloud (Version 0.1.0) [Computer software]. https://doi.org/10.5281/zenodo.6933654
 
 ## Disclaimer
 
