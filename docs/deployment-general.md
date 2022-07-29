@@ -2,13 +2,13 @@
 
 ## Overview
 
-These instructions assume that you manage the configuration of your GCP project through Terraform, and specifically that run your [Terraform commands through Cloud Shell](https://www.hashicorp.com/blog/kickstart-terraform-on-gcp-with-google-cloud-shell).
+These instructions assume that you manage the configuration of your GCP project through Terraform, and specifically that run your [Terraform commands through Cloud Shell](https://www.hashicorp.com/blog/kickstart-terraform-on-gcp-with-google-cloud-shell). Note also that users must have GCP Project Owner or Administrator privileges (e.g., [roles/owner](https://cloud.google.com/iam/docs/understanding-roles#basic)).  
 
-The subsequent pages will walk you through several steps: creating the virtual machine(s) in GCP, provisioning the VM(s), and accessing your deployment of VIAME-Web. 
+The subsequent pages will walk you through several steps: creating the virtual machine(s) and other resources in GCP, provisioning the VM(s), and accessing your deployment of VIAME-Web. 
 
-These instructions work and this deployment is (relatively) straightforward because the VIAME team has created [Docker containers](https://www.docker.com/resources/what-container/) for the different services that make VIAME-Web run. Thus, after some VM configuration, we can simply download and run these containers to use spin up our own instance of VIAME-Web.
+These instructions work and this deployment is (relatively) straightforward because the VIAME team has created [Docker containers](https://www.docker.com/resources/what-container/) for the different services that make up VIAME-Web. Thus, after some VM configuration, we can simply download and run these containers to use spin up our own instance of VIAME-Web. Updating the services is also as simple as pulling down updated versions of the containers.
 
-These steps apply to both deployment scenarios. Unless otherwise specified, these commands (and commands in the scenario-specific instructions) are expected to be run from [Cloud Shell](https://cloud.google.com/shell).
+The steps on this page apply to both deployment scenarios. Unless otherwise specified, these commands (and commands in the scenario-specific instructions) are expected to be run from [Cloud Shell](https://cloud.google.com/shell).
 
 ## Before you begin
 

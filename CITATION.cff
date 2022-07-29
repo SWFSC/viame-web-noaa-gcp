@@ -1,0 +1,29 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  Deploying VIAME-Web in GCP in the NOAA Fisheries
+  Cloud
+message: >-
+  If you deploy using this repository or documentation, please
+  cite as below
+type: software
+authors:
+  - given-names: Samuel
+    email: sam.woodman@noaa.gov
+    affiliation: >-
+      NOAA SWFSC Antarctic Ecosystem Research
+      Division
+    orcid: 'https://orcid.org/0000-0001-6071-8186'
+    family-names: Woodman
+  - given-names: Brandon
+    family-names: Davis
+    email: brandon.davis@kitware.com
+    affiliation: 'Kitware, Inc.'
+  - given-names: Bryon
+    family-names: Lewis
+    email: bryon.lewis@kitware.com
+    affiliation: 'Kitware, Inc.'
+url: "https://github.com/us-amlr/viame-web-noaa-gcp"
+license: CC0
