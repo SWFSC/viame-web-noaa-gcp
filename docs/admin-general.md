@@ -2,6 +2,10 @@
 
 This page provides a summary of recommended best practices for managing your own deployment of VIAME-Web in the NOAA Fisheries Cloud. Note that these admin options should be evaluated and only used if appropriate to your specific use case.
 
+## Addon Management
+
+To download and scan for VIAME addons, such as canned pipelines and algorithms, see the [DIVE Addon Management docs](https://kitware.github.io/dive/Deployment-Docker-Compose/#addon-management).
+
 ## Staying up to date
 
 Keeping your deployment up to date is crucial for getting the latest VIAME-Web features and bug fixes, as well as for debugging purposes. It is strongly recommended that you update your images at least once per week.
@@ -27,10 +31,6 @@ Your VM schedule, i.e., when your VMs are on (and incurring more costs) and when
 If you have a split services deployment, an example schedule might be leaving the web VM during the work week, with an [Instance Schedule](https://cloud.google.com/compute/docs/instances/schedule-instance-start-stop) set to turn it off on Friday evening, and turning the worker on and off as needed to run jobs. This would minimize users needing to turn on the web VM (or turning it off while another user is annotating), which also only having the worker VM on when necessary. Recent DIVE [feature additions](https://github.com/Kitware/dive/issues/1260) allow all users to see the status of the job queue so they know if someone else is currently running a job.
 
 [See here](https://drive.google.com/file/d/17JZZZZtXxhGprYY3FbVZ2HzQXszaM3eO/view?usp=sharing) for a Terraform code template and usage instructions.
-
-## Addon Management
-
-To download and scan for VIAME addons, such as canned pipelines, see the [DIVE Addon Management docs](https://kitware.github.io/dive/Deployment-Docker-Compose/#addon-management).
 
 ## Server Branding Config
 
