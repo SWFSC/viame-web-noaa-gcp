@@ -12,7 +12,7 @@ The steps on this page apply to both deployment scenarios. Unless otherwise spec
 
 ## Before you begin
 
-* Read the DIVE [Deployment Options Overview](https://kitware.github.io/dive/Deployment-Overview/) and [Cloud Deployment Guide - Before you begin
+* Read the [Deployment Options Overview](https://kitware.github.io/dive/Deployment-Overview/) and [Cloud Deployment Guide - Before you begin
 ](https://kitware.github.io/dive/Deployment-Provision/#before-you-begin). 
 
 * Ensure that the required [network changes](network-changes.md) have been made for your project.

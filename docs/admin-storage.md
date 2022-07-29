@@ -4,11 +4,11 @@ This guide details how to store your imagery in a GCS bucket and mirror that tha
 
 ## Setup
 
-This section expands on the [DIVE Cloud Storage Integration docs](https://kitware.github.io/dive/Deployment-Storage).
+This section expands on the [Cloud Storage Integration docs](https://kitware.github.io/dive/Deployment-Storage).
 
 ### Creating access credentials
 
-Follow the DIVE [Creating access credentials instructions](https://kitware.github.io/dive/Deployment-Storage/#creating-access-credentials). You should already have created the service account during [deployment](deployment-general.md#create-gcp-resources). You must create an access key for the same service account that is attached to your VM(s).
+Follow the [Creating access credentials instructions](https://kitware.github.io/dive/Deployment-Storage/#creating-access-credentials). You should already have created the service account during [deployment](deployment-general.md#create-gcp-resources). You must create an access key for the same service account that is attached to your VM(s).
 
 ### Setting up CORS
 
@@ -53,4 +53,4 @@ See [these docs] (https://kitware.github.io/dive/Deployment-Storage/#s3-and-mini
 
 Whenever you add new folders and/or imagery to the bucket, you must repeat the 'Import data' step. Currently the mount point can only be kept up to date automatically using [Pub/Sub notifications](https://kitware.github.io/dive/Deployment-Storage/#pubsub-notifications) if your server has a public static IP address.
 
-Also, without Pub/Sub notifications, you must delete folders from the collection using the DIVE interface, even after deleting the folders from the bucket. 
+Also, without Pub/Sub notifications, you must delete folders from the collection using the VIAME-Web user interface, even after deleting the folders from the bucket. 
