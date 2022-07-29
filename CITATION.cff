@@ -17,13 +17,5 @@ authors:
       Division
     orcid: 'https://orcid.org/0000-0001-6071-8186'
     family-names: Woodman
-  - given-names: Brandon
-    family-names: Davis
-    email: brandon.davis@kitware.com
-    affiliation: 'Kitware, Inc.'
-  - given-names: Bryon
-    family-names: Lewis
-    email: bryon.lewis@kitware.com
-    affiliation: 'Kitware, Inc.'
 url: "https://github.com/us-amlr/viame-web-noaa-gcp"
 license: CC0
