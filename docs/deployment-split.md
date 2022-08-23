@@ -46,21 +46,13 @@ gcloud compute ssh $INSTANCE_NAME_WEB --zone=$ZONE --command="/opt/noaa/dive_sta
 
 ### Worker VM
 
-Next, provision the worker. Download the install script to the VM, make it executable, and then run the install script from within the VM. Respond 'no' to the PAM overwrite question. Running this install script may take 10-15 minutes.
-
-For the internal IP of the web node, you can either copy internal IP of the web node and past it into the command, or set the variables from above within the worker VM to be able to use WEB_INTERNAL_IP.
+Next, provision the worker. Download the install script to the VM, make it executable, and then run the install script. Running this install script may take 10-15 minutes.
 
 ``` bash
 gcloud compute ssh $INSTANCE_NAME_WORKER --zone=$ZONE \
-  --command="curl -L $REPO_URL/dive_install.sh -o ~/dive_install.sh && chmod +x ~/dive_install.sh"
-
-# ssh into the worker VM
-gcloud compute ssh $INSTANCE_NAME_WORKER --zone=$ZONE 
-
-# From within the VM, after assigning relevant variables run:
-WEB_INTERNAL_IP=$(gcloud compute instances describe $INSTANCE_NAME_WEB --zone=$ZONE  --format='get(networkInterfaces[0].networkIP)')
-~/dive_install.sh -w $WEB_INTERNAL_IP
-exit #to exit the VM
+  --command="curl -L $REPO_URL/dive_install.sh -o ~/dive_install.sh \
+  && chmod +x ~/dive_install.sh \
+  && ~/dive_install.sh -w $WEB_INTERNAL_IP"
 ```
 
 Because of permissions changes and installing the NVIDIA drivers, the VM must now be restarted. Restart the VM and run the startup script to pull updated files and spin up the VIAME-Web stack:

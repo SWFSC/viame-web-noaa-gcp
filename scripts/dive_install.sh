@@ -26,7 +26,9 @@ do
   esac
 done
 
-# todo add error check that -w flag is not empty
+# Installing nvidia drivers pops up an override question
+# https://askubuntu.com/questions/594573
+echo "libpam-runtime libpam-runtime/override boolean false" | sudo debconf-set-selections
 
 # Update VM
 sudo apt-get update
