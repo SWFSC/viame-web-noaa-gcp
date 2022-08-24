@@ -26,7 +26,7 @@ WEB_INTERNAL_IP=$(gcloud compute instances describe $INSTANCE_NAME_WEB --zone=$Z
 
 ### Web VM
 
-Once the VMs have been created, download the install script to the VM, make it executable, and then run the install script from within the VM. Respond 'no' to the PAM overwrite question. This install script does not install GPU drivers, and thus all commands can be passed to the VM from Cloud Shell.
+Once the VMs have been created and variables have been set, run the following command to download the install script to the VM, make it executable, and finally run the install script.
 
 ``` bash
 gcloud compute ssh $INSTANCE_NAME_WEB --zone=$ZONE \
@@ -46,7 +46,7 @@ gcloud compute ssh $INSTANCE_NAME_WEB --zone=$ZONE --command="/opt/noaa/dive_sta
 
 ### Worker VM
 
-Next, provision the worker. Download the install script to the VM, make it executable, and then run the install script. Running this install script may take 10-15 minutes.
+Next, provision the worker. As above, the following command downloads the install script to the VM, makes it executable, and then runs the install script. Running this install script may take 10-15 minutes.
 
 ``` bash
 gcloud compute ssh $INSTANCE_NAME_WORKER --zone=$ZONE \
@@ -97,5 +97,4 @@ SSH into the worker VM and check if the VM can make a connection to the web VM o
 WEB_IP=##.##.##.##
 nc -v -w3 $WEB_IP 8010
 nc -v -w3 $WEB_IP 5672
-
 ```

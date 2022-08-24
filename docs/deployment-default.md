@@ -12,7 +12,7 @@ To create a single VM for an instance of VIAME-Web, create a VM with at least on
 
 ## Provision GCP VM
 
-Once you have created the VM, set variables in your Cloud Shell session that will be used throughout. Then, download the install script to the VM, make it executable, and then run the install script from within the VM. Running this install script may take 10-15 minutes.
+Once you have created the VM, set variables in your Cloud Shell session that will be used throughout. Then, run a command to download the install script to the VM, make it executable, and then run the install script on the VM. Running this install script may take 10-15 minutes.
 
 ``` bash
 ZONE=us-east4-c

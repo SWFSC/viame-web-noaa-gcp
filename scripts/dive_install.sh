@@ -26,12 +26,12 @@ do
   esac
 done
 
-# Installing nvidia drivers pops up an override question
+# Default no for PAM override message from nvidia driver installation
 # https://askubuntu.com/questions/594573
 echo "libpam-runtime libpam-runtime/override boolean false" | sudo debconf-set-selections
 
 # Update VM
-sudo apt-get update
+sudo apt update
 
 # If full deployment, allow TCP forwarding
 if [ -z "$WEB_INTERNAL_IP" ]

@@ -9,7 +9,7 @@ then
   exit 1
 fi
 
-sudo apt-get update
+sudo apt update
 
 # Allow TCP Forwarding
 sudo sed -i \
