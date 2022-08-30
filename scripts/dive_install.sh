@@ -46,7 +46,7 @@ fi
 NVIDIA_DRIVER_VERSION=$(sudo apt-cache search 'linux-modules-nvidia-[0-9]+-gcp$' | awk '{print $1}' | sort | tail -n 1 | head -n 1 | awk -F"-" '{print $4}')
 # NVIDIA_DRIVER_VERSION=470
 echo -e "\nINSTALLING NVIDIA $NVIDIA_DRIVER_VERSION DRIVER\n"
-sudo ap-get -y install linux-modules-nvidia-${NVIDIA_DRIVER_VERSION}-gcp nvidia-driver-${NVIDIA_DRIVER_VERSION}
+sudo apt-get -y install linux-modules-nvidia-${NVIDIA_DRIVER_VERSION}-gcp nvidia-driver-${NVIDIA_DRIVER_VERSION}
 
 # Prep directory
 DIVE_DIR=/opt/noaa
