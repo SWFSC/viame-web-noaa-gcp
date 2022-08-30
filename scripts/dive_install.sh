@@ -31,7 +31,7 @@ done
 echo "libpam-runtime libpam-runtime/override boolean false" | sudo debconf-set-selections
 
 # Update VM
-sudo apt update
+sudo apt-get update
 
 # If full deployment, allow TCP forwarding
 if [ -z "$WEB_INTERNAL_IP" ]
@@ -41,12 +41,12 @@ then
     /etc/ssh/sshd_config
 fi
 
-# Install nvidia 470 driver. Reply 'no' to PAM overwrite prompt
+# Install latest nvidia driver. Reply 'no' to PAM overwrite prompt
 # https://cloud.google.com/compute/docs/gpus/install-drivers-gpu#secure-boot
 NVIDIA_DRIVER_VERSION=$(sudo apt-cache search 'linux-modules-nvidia-[0-9]+-gcp$' | awk '{print $1}' | sort | tail -n 1 | head -n 1 | awk -F"-" '{print $4}')
 # NVIDIA_DRIVER_VERSION=470
 echo -e "\nINSTALLING NVIDIA $NVIDIA_DRIVER_VERSION DRIVER\n"
-sudo apt -y install linux-modules-nvidia-${NVIDIA_DRIVER_VERSION}-gcp nvidia-driver-${NVIDIA_DRIVER_VERSION}
+sudo ap-get -y install linux-modules-nvidia-${NVIDIA_DRIVER_VERSION}-gcp nvidia-driver-${NVIDIA_DRIVER_VERSION}
 
 # Prep directory
 DIVE_DIR=/opt/noaa
