@@ -19,19 +19,10 @@ The steps on this page apply to both deployment scenarios. Unless otherwise spec
 
 * Ensure that the [Google Cloud CLI](https://cloud.google.com/sdk/gcloud) tools are [installed and configured](https://cloud.google.com/sdk/docs/install) on your local workstation.
 
-## Clone Repository
-
-It is recommended to clone the [viame-web-noaa-gcp repo](https://github.com/us-amlr/viame-web-noaa-gcp) in the home directory of your Cloud Shell to 1) use the module and 2) so that relative paths match these instructions.
-
-``` bash
-# from your cloud shell
-git clone https://github.com/us-amlr/viame-web-noaa-gcp.git
-```
-
 ## Create GCP Resources
 
-Both scenarios require many of the same resources, including: a GCS bucket in which to store imagery that will be connected to your VIAME-Web deployment, a NMFS-approved image, and a service account with sufficient permissions. See [here](https://kitware.github.io/dive/Deployment-Storage/#setting-up-cors) for more information about the required CORS headers for the bucket. 
+Both scenarios require many of the same resources, including: a GCS bucket in which to store imagery that will be connected to your VIAME-Web deployment, a NMFS-approved image, and a service account with sufficient permissions. [See here](https://drive.google.com/file/d/16vJPK8ikKm5QlPcrcWciJhXOGvGN6jTa/view?usp=sharing) for a Terraform code template for general resources.
 
 Note that there might be a delay between a VM has been created and/or started, and when you can run an install or startup script. If you get an error, please wait a few minutes and try to run the command again.
 
-[See here](https://drive.google.com/file/d/16vJPK8ikKm5QlPcrcWciJhXOGvGN6jTa/view?usp=sharing) for a Terraform code template for general resources.
+[See here](https://kitware.github.io/dive/Deployment-Storage/#setting-up-cors) for more information about the required CORS headers for the bucket. 

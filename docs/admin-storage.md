@@ -43,11 +43,13 @@ You can also specify more granular levels of permissions as appropriate.
 
 ### Import data
 
-Now that the mount point has been created, you must 'import' the data from the bucket. Go back to <http://localhost:8010/girder#assetstores> and click 'Import data' for the desired assetstore. Enter the unique ID of the 'bucket-mount' folder in the 'Destination ID' box. If you wish to import the whole bucket, leave 'Import path' blank. Click 'Begin import' and the service will begin to import the data so that the imagery and folders in the bucket show up in the collection.
+Now that the mount point has been created, you must 'import' the data from the bucket. Go back to <http://localhost:8010/girder#assetstores> and click 'Import data' for the desired assetstore. Either a) click the folder icon to browse to the 'bucket-mount' folder or b) enter the unique ID of the 'bucket-mount' folder in the 'Destination ID' box. If you wish to import the whole bucket, leave 'Import path' blank. 
+
+Click 'Begin import' and the service will begin to import the data so that the imagery and folders in the bucket show up in the collection.
 
 ## Assetstore Management
 
-See [these docs] (https://kitware.github.io/dive/Deployment-Storage/#s3-and-minio-mirroring) and [this question](https://kitware.github.io/dive/FAQ/#how-can-i-load-data-incrementally) for data mirroring guidelines. 
+See [these docs](https://kitware.github.io/dive/Deployment-Storage/#s3-and-minio-mirroring) and [this question](https://kitware.github.io/dive/FAQ/#how-can-i-load-data-incrementally) for data mirroring guidelines. 
 
 ### Adding or deleting data
 

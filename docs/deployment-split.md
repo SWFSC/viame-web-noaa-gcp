@@ -8,8 +8,6 @@ These instructions are for splitting VIAME-Web web and worker services across tw
 
 To create two VMs for a split services instance of VIAME-Web, create two VMs: a web and a worker. The infrastructure of the web and worker VMs should be identical, except that the web node will have no GPU, should have a slightly larger disk capacity, and needs SSH AllowTcpForwarding to be enabled. 
 
-Use the 'viame-web-noaa-gcp' module to create these VMs. The [source path](https://www.terraform.io/language/modules/sources) to this module can either be relative (e.g., '../viame-web-noaa-gcp') or an unprefixed `github.com` URL (e.g., 'github.com/us-amlr/viame-web-noaa-gcp').
-
 [See here](https://drive.google.com/file/d/1aD1sjUx3M4AMGAi-o57V--xu1HfKxEy5/view?usp=sharing) for a Terraform code template for the VMs for a split services deployment.
 
 ## Provision GCP VMs
@@ -40,7 +38,8 @@ You still need to restart the VM to allow permissions changes to take effect. Th
 ``` bash
 gcloud compute instances stop $INSTANCE_NAME_WEB --zone=$ZONE && \
   gcloud compute instances start $INSTANCE_NAME_WEB --zone=$ZONE
-
+```
+``` bash
 gcloud compute ssh $INSTANCE_NAME_WEB --zone=$ZONE --command="/opt/noaa/dive_startup_web.sh"
 ```
 
@@ -60,7 +59,8 @@ Because of permissions changes and installing the NVIDIA drivers, the VM must no
 ``` bash
 gcloud compute instances stop $INSTANCE_NAME_WORKER --zone=$ZONE && \
   gcloud compute instances start $INSTANCE_NAME_WORKER --zone=$ZONE
-
+```
+``` bash
 gcloud compute ssh $INSTANCE_NAME_WORKER --zone=$ZONE --command="/opt/noaa/dive_startup_worker.sh"
 ```
 
@@ -83,7 +83,7 @@ For the split services to be able to work, the web and worker VMs must be able t
 SSH into the web VM and check that the VM is listening on at least ports 8010 and 5672. Note that you must have root access to run these commands.
 
 ``` bash
-# check if VM is listening on any ports - should be at least 8010 and 5672 
+# check if VM is listening on any ports - should list at least 8010 and 5672 as LISTEN
 sudo apt install net-tools #install if necessary 
 netstat -plaunt
 
