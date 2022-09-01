@@ -83,11 +83,12 @@ For the split services to be able to work, the web and worker VMs must be able t
 SSH into the web VM and check that the VM is listening on at least ports 8010 and 5672. Note that you must have root access to run these commands.
 
 ``` bash
-# check if VM is listening on any ports - should list at least 8010 and 5672 as LISTEN
+# check if VM is listening on any ports
+# should list at least 8010 and 5672 as LISTEN
 sudo apt install net-tools #install if necessary 
 netstat -plaunt
 
-# Get the internal IP of the web VM from the third block in the output
+# Get the internal IP of the web VM from the third output block if needed
 ifconfig
 ```
 
