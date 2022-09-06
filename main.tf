@@ -92,6 +92,7 @@ resource "google_compute_instance" "default" {
   tags = var.tags
   metadata = var.metadata
   resource_policies = var.resource_policies
+  allow_stopping_for_update = var.allow_stopping_for_update
 
   guest_accelerator {
     type  = var.gpu_type
@@ -125,6 +126,4 @@ resource "google_compute_instance" "default" {
     # > VMs with GPUs cannot live migrate, make sure that you set the --maintenance-policy TERMINATE flag.
     on_host_maintenance = "${ var.gpu_count >= 1 ? "TERMINATE" : "MIGRATE"}"
   }
-
-  allow_stopping_for_update = var.allow_stopping_for_update
 }
