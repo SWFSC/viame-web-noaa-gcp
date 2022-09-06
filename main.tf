@@ -68,6 +68,11 @@ variable "deletion_protection" {
   default = false
 }
 
+variable "allow_stopping_for_update" {
+  type = bool
+  default = true
+}
+
 
 
 resource "google_compute_instance" "default" {
@@ -119,5 +124,7 @@ resource "google_compute_instance" "default" {
     # https://cloud.google.com/compute/docs/gpus/create-vm-with-gpus
     # > VMs with GPUs cannot live migrate, make sure that you set the --maintenance-policy TERMINATE flag.
     on_host_maintenance = "${ var.gpu_count >= 1 ? "TERMINATE" : "MIGRATE"}"
-  }  
+  }
+
+  allow_stopping_for_update = var.allow_stopping_for_update
 }
