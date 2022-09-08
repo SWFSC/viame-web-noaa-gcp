@@ -1,6 +1,6 @@
 # Access Instance of VIAME-Web
 
-If you have [configured the containers to start when the VM is started](admin-docker-autostart.md), then skip to [Create SSH Tunnel](deployment-access.md/create-ssh-tunnel). Otherwise, run the startup scripts.
+If you have [configured the containers to start when the VM is started](admin-docker-autostart.md), then skip to [Create SSH Tunnel](deployment-access.md/create-ssh-tunnel). Otherwise, run the startup scripts first.
 
 ## Run Startup Scripts
 

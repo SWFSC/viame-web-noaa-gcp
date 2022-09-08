@@ -23,7 +23,7 @@ The steps on this page apply to both deployment scenarios. Unless otherwise spec
 
 Both scenarios require many of the same resources, including: a GCS bucket in which to store imagery that will be connected to your VIAME-Web deployment, a NMFS-approved image, and a service account with sufficient permissions. 
 
-[Click here](https://drive.google.com/u/0/uc?id=16vJPK8ikKm5QlPcrcWciJhXOGvGN6jTa&export=download) to download the Terraform code template for general resources. Paste this code into your Terraform config file (e.g., main.tf) and update project-specific values as needed. In the Cloud Shell Terminal, run `terraform init`, and then `terraform apply` to create the resources.
+[Click here](https://drive.google.com/u/0/uc?id=16vJPK8ikKm5QlPcrcWciJhXOGvGN6jTa&export=download) to download the Terraform code template for general resources. Copy this code into your Terraform config file (e.g., main.tf) and update project-specific values as needed. In the Cloud Shell Terminal, run `terraform init`, and then `terraform apply` to create the resources.
 
 ## Other Notes
 

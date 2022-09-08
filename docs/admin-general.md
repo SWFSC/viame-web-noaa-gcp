@@ -22,7 +22,7 @@ Data in GCS Storage buckets are quite [durable](https://cloud.google.com/blog/pr
 
 You can create a GCP [Snapshot Schedule](https://cloud.google.com/compute/docs/disks/scheduled-snapshots) to create snapshot backups of your disk(s). 
 
-[Click here](https://drive.google.com/u/0/uc?id=17JZZZZtXxhGprYY3FbVZ2HzQXszaM3eO&export=download) to download a Terraform code template and usage instructions for data backup and VM management.
+[Click here](https://drive.google.com/u/0/uc?id=17JZZZZtXxhGprYY3FbVZ2HzQXszaM3eO&export=download) to download a Terraform code template and usage instructions for data backup and VM management. Copy this code into your Terraform config file (e.g., main.tf) and update project-specific values as needed. In the Cloud Shell Terminal, run `terraform init`, and then `terraform apply` to create the resources.
 
 ## VM management
 

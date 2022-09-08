@@ -8,7 +8,7 @@ These instructions are for a single VM with at least one GPU, meaning all operat
 
 To create a single VM for an instance of VIAME-Web, create a VM with at least one GPU using the 'viame-web-noaa-gcp' module. The [source path](https://www.terraform.io/language/modules/sources) to this module can either be relative (e.g., '../viame-web-noaa-gcp') or an unprefixed `github.com` URL (e.g., 'github.com/us-amlr/viame-web-noaa-gcp'). Be sure to provide a non-zero value for gpu_count. 
 
-[Click here](https://drive.google.com/u/0/uc?id=1aD1sjUx3M4AMGAi-o57V--xu1HfKxEy5&export=download) to download the Terraform code template for a VM for a default deployment. Paste this code into your Terraform config file (e.g., main.tf) and update project-specific values as needed. In the Cloud Shell Terminal, run `terraform init`, and then `terraform apply` to create the resources.
+[Click here](https://drive.google.com/u/0/uc?id=1aD1sjUx3M4AMGAi-o57V--xu1HfKxEy5&export=download) to download the Terraform code template for a VM for a default deployment. Copy this code into your Terraform config file (e.g., main.tf) and update project-specific values as needed. In the Cloud Shell Terminal, run `terraform init`, and then `terraform apply` to create the resources.
 
 ## Provision GCP VM
 

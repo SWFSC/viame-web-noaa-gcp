@@ -1,6 +1,6 @@
 # Migrating to a new server
 
-Within GCP you may need to move to a new project, to resize a disk, or to use a different image. However, these actions require destroying and recreating VMs, and destroying a VM and its associated disk means that all data stored on that VM (e.g., user annotations or trained models) will be lost. This section details how to do this without losing any user data.
+Within GCP you may need to move to a new project, to resize a disk, or to use a different image. However, these actions require destroying and recreating VMs, and destroying a VM and its associated disk means that all data stored on that VM (e.g., user annotations or trained models) will be lost. This section details how to do this without losing any user data (user accounts, annotations, etc.).
 
 ## Default and Web VM
 

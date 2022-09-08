@@ -4,7 +4,7 @@ These instructions are for users of the 'GCP IaC with Terraform and Cloud Founda
 
 ## Create GCP Resources
 
-[Click here](https://drive.google.com/u/0/uc?id=1PAVHQowrbEUKVxUMIY2XttfcwZ9EYljD&export=download) to download the Terraform code template for the Qwiklabs deployment. Copy this code into your main.tf file.
+[Click here](https://drive.google.com/u/0/uc?id=1PAVHQowrbEUKVxUMIY2XttfcwZ9EYljD&export=download) to download the Terraform code template for the Qwiklabs deployment. Copy this code into your Terraform config file (e.g., main.tf) and update project-specific values as needed. In the Cloud Shell Terminal, run `terraform init`, and then `terraform apply` to create the resources.
 
 ## Provision GCP VM
 
