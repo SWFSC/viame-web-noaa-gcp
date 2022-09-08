@@ -1,10 +1,10 @@
 # Access Instance of VIAME-Web
 
-The services (Docker containers) installed on the VM(s) must be running to access the VIAME-Web instance; it is not enough just to turn on the VMs. Thus, if you have just turned on the VM, you must run the startup script again to start the services. 
+If you have [configured the containers to start when the VM is started](admin-docker-autostart.md), then skip to [Create SSH Tunnel](deployment-access.md/create-ssh-tunnel). Otherwise, run the startup scripts.
 
 ## Run Startup Scripts
 
-These commands to start the services can be run from Cloud Shell or a local shell with [Google Cloud CLI installed](deployment-general.md/before-you-begin) (i.e., a Cloud SDK shell).
+The services (Docker containers) installed on the VM(s) must be running to access the VIAME-Web instance, and thus unless you have [configured the containers to start when the VM is started](admin-docker-autostart.md), it is not enough just to turn on the VMs. These commands to start the services can be run from Cloud Shell or a local shell with [Google Cloud CLI installed](deployment-general.md/before-you-begin) (i.e., a Cloud SDK shell).
 
 Note that for other users to run the startup script, they must have permission to run `docker-compose` on the VM. To allow this, you can add users to the docker group. See [manage docker as a non-root user](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) for details.
 

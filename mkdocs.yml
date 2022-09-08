@@ -12,8 +12,6 @@ theme:
     - navigation.tabs.sticky
     - navigation.expand
 
-# extra_css: [extra.css]
-
 nav:
   - Home: index.md
   - Deployment Guide: 
@@ -24,8 +22,10 @@ nav:
         - Split Services: deployment-split.md
     - Accessing VIAME-Web: deployment-access.md
     - Network Changes: network-changes.md
+    - Qwiklab: qwiklab.md
   - Administrator Guide:
     - General: admin-general.md
     - Cloud Storage Integration: admin-storage.md
     - Server Migration: admin-server-migration.md
+    - Automatically Start Services: admin-docker-autostart.md
   - Support: support.md
