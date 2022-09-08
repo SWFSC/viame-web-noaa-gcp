@@ -28,8 +28,8 @@ gcloud compute ssh $INSTANCE_NAME --zone=$ZONE \
 Because of permissions changes and installing the NVIDIA drivers, the VM must now be restarted. While you can restart the VM from the console, it is generally easiest to run the following from Cloud Shell to 1) restart the VM and 2) run the startup script to pull updated files and spin up the VIAME-Web stack:
 
 ``` bash
-gcloud compute instances stop $INSTANCE_NAME --zone=$ZONE && \
-  gcloud compute instances start $INSTANCE_NAME --zone=$ZONE
+gcloud compute instances stop $INSTANCE_NAME --zone=$ZONE \
+  && gcloud compute instances start $INSTANCE_NAME --zone=$ZONE
 ```
 ``` bash
 gcloud compute ssh $INSTANCE_NAME --zone=$ZONE --command="/opt/noaa/dive_startup_full.sh"

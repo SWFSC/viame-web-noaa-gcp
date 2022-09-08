@@ -36,8 +36,8 @@ gcloud compute ssh $INSTANCE_NAME_WEB --zone=$ZONE \
 You still need to restart the VM to allow permissions changes to take effect. Then, run the startup script for the web node.
 
 ``` bash
-gcloud compute instances stop $INSTANCE_NAME_WEB --zone=$ZONE && \
-  gcloud compute instances start $INSTANCE_NAME_WEB --zone=$ZONE
+gcloud compute instances stop $INSTANCE_NAME_WEB --zone=$ZONE \
+  && gcloud compute instances start $INSTANCE_NAME_WEB --zone=$ZONE
 ```
 ``` bash
 gcloud compute ssh $INSTANCE_NAME_WEB --zone=$ZONE --command="/opt/noaa/dive_startup_web.sh"
@@ -57,8 +57,8 @@ gcloud compute ssh $INSTANCE_NAME_WORKER --zone=$ZONE \
 Because of permissions changes and installing the NVIDIA drivers, the VM must now be restarted. Restart the VM and run the startup script to pull updated files and spin up the VIAME-Web stack:
 
 ``` bash
-gcloud compute instances stop $INSTANCE_NAME_WORKER --zone=$ZONE && \
-  gcloud compute instances start $INSTANCE_NAME_WORKER --zone=$ZONE
+gcloud compute instances stop $INSTANCE_NAME_WORKER --zone=$ZONE \
+  && gcloud compute instances start $INSTANCE_NAME_WORKER --zone=$ZONE
 ```
 ``` bash
 gcloud compute ssh $INSTANCE_NAME_WORKER --zone=$ZONE --command="/opt/noaa/dive_startup_worker.sh"
