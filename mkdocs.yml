@@ -22,7 +22,7 @@ nav:
         - Split Services: deployment-split.md
     - Accessing VIAME-Web: deployment-access.md
     - Network Changes: network-changes.md
-    - Qwiklab: qwiklab.md
+    - Qwiklabs: qwiklabs.md
   - Administrator Guide:
     - General: admin-general.md
     - Cloud Storage Integration: admin-storage.md
