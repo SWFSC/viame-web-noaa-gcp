@@ -40,6 +40,11 @@ variable "subnetwork" {
   type = string
 }
 
+variable "network_ip" {
+  type = string
+  default = ""
+}
+
 variable "name" {
   type    = string
 }
@@ -102,6 +107,7 @@ resource "google_compute_instance" "default" {
   network_interface {
     subnetwork_project = var.subnetwork_project
     subnetwork = var.subnetwork
+    network_ip = var.network_ip
   }
 
   service_account {
