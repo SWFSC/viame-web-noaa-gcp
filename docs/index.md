@@ -10,14 +10,6 @@ hide:
   <a href="https://www.viametoolkit.org/"><img width="320" style="margin-right: 50px;" src="https://raw.githubusercontent.com/Kitware/dive/main/docs/images/General/logo.png"></a>  
 </p>
 
-<!-- <p>  
-  <img width="320" style="margin-right: 50px;" src="https://raw.githubusercontent.com/RVerse-Tutorials/NOAA-branded-simple/main/static/noaa-fisheries-rgb-2line-horizontal-small.png">
-  <img width="320" style="margin-right: 50px;" src="https://raw.githubusercontent.com/Kitware/dive/main/docs/images/General/logo.png">
-</p> -->
-<!-- <img width="320" style="margin-right: 50px;" src="images/noaa-fisheries-rgb-2line-horizontal-small.png"> -->
-
-<!-- <a class ="mylink line" href="https://www.commerce.gov/">U.S. Department of Commerce</a> -->
-
 The site details how to deploy and manage an instance of VIAME-Web on a NOAA Fisheries-hardened [virtual machine](https://cloud.google.com/compute) (VM) in a [GCP Project](https://sites.google.com/noaa.gov/fisheriescloudservices/home) within the [NOAA Fisheries Cloud](https://sites.google.com/noaa.gov/nmfs-hq-ocio-cloud-portal/home). 
 
 These instructions were developed from [DIVE Deployment Scenario 1](https://kitware.github.io/dive/Deployment-Provision/) with the extensive help and expertise of the VIAME team, in particular Brandon Davis and Bryon Lewis, and Ed Rodgers. Note that these docs do not supersede any of the [DIVE docs](https://kitware.github.io/dive). Rather, they supplement the [DIVE deployment options](https://kitware.github.io/dive/Deployment-Overview/) by providing NOAA Fisheries Cloud-specific deployment instructions.
