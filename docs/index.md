@@ -6,9 +6,14 @@ hide:
 # VIAME-Web-NOAA-GCP Documentation
 
 <p>  
+  <a href="https://www.fisheries.noaa.gov/"><img width="320" style="margin-right: 50px;" src="https://raw.githubusercontent.com/RVerse-Tutorials/NOAA-branded-simple/main/static/noaa-fisheries-rgb-2line-horizontal-small.png"></a>
+  <a href="https://www.viametoolkit.org/"><img width="320" style="margin-right: 50px;" src="https://raw.githubusercontent.com/Kitware/dive/main/docs/images/General/logo.png"></a>  
+</p>
+
+<!-- <p>  
   <img width="320" style="margin-right: 50px;" src="https://raw.githubusercontent.com/RVerse-Tutorials/NOAA-branded-simple/main/static/noaa-fisheries-rgb-2line-horizontal-small.png">
   <img width="320" style="margin-right: 50px;" src="https://raw.githubusercontent.com/Kitware/dive/main/docs/images/General/logo.png">
-</p>
+</p> -->
 <!-- <img width="320" style="margin-right: 50px;" src="images/noaa-fisheries-rgb-2line-horizontal-small.png"> -->
 
 <!-- <a class ="mylink line" href="https://www.commerce.gov/">U.S. Department of Commerce</a> -->
