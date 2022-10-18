@@ -12,6 +12,15 @@ theme:
     - navigation.tabs.sticky
     - navigation.expand
 
+extra:
+  social:
+    - icon: fontawesome/solid/building
+      link: https://www.commerce.gov/
+    - icon: fontawesome/solid/cloud
+      link: https://www.noaa.gov
+    - icon: fontawesome/solid/fish-fins
+      link: https://www.fisheries.noaa.gov/
+
 nav:
   - Home: index.md
   - Deployment Guide: 
