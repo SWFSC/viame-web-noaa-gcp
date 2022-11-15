@@ -133,3 +133,7 @@ resource "google_compute_instance" "default" {
     on_host_maintenance = "${ var.gpu_count >= 1 ? "TERMINATE" : "MIGRATE"}"
   }
 }
+
+output "name" {
+  value = google_compute_instance.default.name
+}
