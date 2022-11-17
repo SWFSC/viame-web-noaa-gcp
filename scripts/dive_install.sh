@@ -94,6 +94,7 @@ sudo chmod a+rx /usr/local/bin/docker-compose
 # Create env file. 
 # No edits if only using one VM. If -w (worker) flag, then update the env file
 cp .env.default .env
+chmod 755 .env
 
 # If worker (-w flag), then update the env file
 if [ -z "$WEB_INTERNAL_IP" ]

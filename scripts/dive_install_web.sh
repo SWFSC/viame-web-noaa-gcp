@@ -60,6 +60,7 @@ sudo chmod a+rx /usr/local/bin/docker-compose
 # Create env file and add necessary variables
 cd dive
 cp .env.default .env
+chmod 755 .env
 
 echo "Web VM internal IP: $WEB_INTERNAL_IP"
 # docker container can't connect via IP for some reason 
