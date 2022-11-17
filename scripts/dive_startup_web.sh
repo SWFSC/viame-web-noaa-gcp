@@ -12,8 +12,7 @@ else
 fi
 export TMPDIR=$HOME/tmp #this must be run in each shell process
 
-cd /opt/noaa/dive
 
-DOCKER_FILE=docker-compose.yml
+DOCKER_FILE=/opt/noaa/dive/docker-compose.yml
 docker-compose -f $DOCKER_FILE pull --include-deps girder rabbit #watchtower
 docker-compose -f $DOCKER_FILE up -d girder rabbit
