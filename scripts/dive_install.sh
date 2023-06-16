@@ -88,7 +88,7 @@ sudo usermod -aG docker $USER
 # must install docker-compose like this to get v1.29; v2 has bugs still
 # Note that `docker-compose --version` will not work until running `export TMPDIR=$HOME/tmp`
 sudo rm /usr/local/bin/docker-compose
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.18.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod a+rx /usr/local/bin/docker-compose
 
 # Create env file. 
