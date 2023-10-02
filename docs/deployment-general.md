@@ -25,7 +25,7 @@ Both scenarios require many of the same resources, including: a GCS bucket in wh
 
 [Click here](https://drive.google.com/u/0/uc?id=16vJPK8ikKm5QlPcrcWciJhXOGvGN6jTa&export=download) to download the Terraform code template for general resources. Copy this code into your Terraform config file (e.g., main.tf) and update project-specific values as needed. In the Cloud Shell Terminal, run `terraform init`, and then `terraform apply` to create the resources.
 
-The architecture of a deployment is below:
+The architecture of a deployment is below. For additional reference, see the NOAA Fisheries [GCP Customer Guide](https://docs.google.com/document/d/1iO_zUmWQxPh-_yooGnLM1YlEXWO77JwmTX8VK-zDBn4/edit?usp=sharing)
 
 ![Home](images/GCP-architecture-png.png)
 
