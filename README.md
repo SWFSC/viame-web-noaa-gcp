@@ -16,8 +16,6 @@ This repository can be cited as (preferred):
 
 Woodman, S. (2022). Deploying VIAME-Web in GCP in the NOAA Fisheries Cloud (Version 0.1.0) [Computer software]. https://doi.org/10.5281/zenodo.6933654
 
-A NOAA Tech Memo is in prep, and a link to the paper will be added to this readme when appropriate.
-
 ## Presentations
 
 NMFS Machine Learning & Computer Vision Community of Practice, Aug 1 2022: [VIAME-Web in GCP in the NOAA Fisheries Cloud](https://docs.google.com/presentation/d/1x2f5r2Yzbo5MNnkkKZxHAxsX6gaMX4JkT8AgJBGfSB0/edit?usp=sharing)
