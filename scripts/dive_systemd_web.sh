@@ -6,6 +6,8 @@ sudo sh -c 'echo "[Unit]
 Description=Run VIAME-Web web startup script at startup after all systemd services are loaded
 After=default.target
 Requires=docker.service
+StartLimitIntervalSec=120
+StartLimitBurst=2
 
 [Service]
 Type=simple
