@@ -18,3 +18,5 @@ export TMPDIR=$HOME/tmp #this must be run in each shell process
 DOCKER_FILE=/opt/noaa/dive/docker-compose.yml
 docker-compose -f $DOCKER_FILE pull girder_worker_pipelines girder_worker_training girder_worker_default
 docker-compose -f $DOCKER_FILE up -d --no-deps girder_worker_pipelines girder_worker_training girder_worker_default
+
+exit 0

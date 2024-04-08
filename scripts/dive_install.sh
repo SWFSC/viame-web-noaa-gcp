@@ -42,11 +42,12 @@ then
 fi
 
 # Install latest nvidia driver. Reply 'no' to PAM overwrite prompt
-# https://cloud.google.com/compute/docs/gpus/install-drivers-gpu#secure-boot
-NVIDIA_DRIVER_VERSION=$(sudo apt-cache search 'linux-modules-nvidia-[0-9]+-gcp$' | awk '{print $1}' | sort | tail -n 1 | head -n 1 | awk -F"-" '{print $4}')
+# # https://cloud.google.com/compute/docs/gpus/install-drivers-gpu#secure-boot
+# NVIDIA_DRIVER_VERSION=$(sudo apt-cache search 'linux-modules-nvidia-[0-9]+-gcp$' | awk '{print $1}' | sort | tail -n 1 | head -n 1 | awk -F"-" '{print $4}')
+NVIDIA_DRIVER_VERSION=$(sudo apt-cache search 'nvidia-headless-[0-9]+$' | awk '{print $1}' | sort | tail -n 1 | head -n 1 | awk -F"-" '{print $3}')
 # NVIDIA_DRIVER_VERSION=470
-echo -e "\nINSTALLING NVIDIA $NVIDIA_DRIVER_VERSION DRIVER\n"
-sudo apt-get -y install linux-modules-nvidia-${NVIDIA_DRIVER_VERSION}-gcp nvidia-driver-${NVIDIA_DRIVER_VERSION}
+echo -e "\nINSTALLING NVIDIA DRIVER VERSION $NVIDIA_DRIVER_VERSION\n"
+sudo apt-get -y install nvidia-utils-${NVIDIA_DRIVER_VERSION} nvidia-headless-${NVIDIA_DRIVER_VERSION}
 
 # Prep directory
 DIVE_DIR=/opt/noaa

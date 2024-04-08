@@ -16,3 +16,5 @@ export TMPDIR=$HOME/tmp #this must be run in each shell process
 DOCKER_FILE=/opt/noaa/dive/docker-compose.yml
 docker-compose -f $DOCKER_FILE pull --include-deps girder rabbit #watchtower
 docker-compose -f $DOCKER_FILE up -d girder rabbit
+
+exit 0

@@ -78,6 +78,11 @@ variable "allow_stopping_for_update" {
   default = true
 }
 
+variable "enable_secure_boot" {
+  type = bool
+  default = true
+}
+
 
 
 resource "google_compute_instance" "default" {
@@ -116,7 +121,7 @@ resource "google_compute_instance" "default" {
   }
 
   shielded_instance_config {
-    enable_secure_boot = "true"
+    enable_secure_boot = var.enable_secure_boot
   }
 
   scheduling {
