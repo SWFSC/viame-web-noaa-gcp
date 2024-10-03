@@ -1,8 +1,8 @@
 site_name: VIAME-Web-NOAA-GCP
-site_url: https://us-amlr.github.io/viame-web-noaa-gcp
+site_url: https://swfsc.github.io/viame-web-noaa-gcp
 site_author: Sam Woodman
 
-repo_url: https://github.com/us-amlr/viame-web-noaa-gcp
+repo_url: https://github.com/SWFSC/viame-web-noaa-gcp
 
 theme:
   name: material
