@@ -1,7 +1,7 @@
 ZONE=us-east4-b
 INSTANCE_NAME_WEB=viame-web-amlr-web
 INSTANCE_NAME_WORKER=viame-web-amlr-worker
-REPO_URL=https://raw.githubusercontent.com/us-amlr/viame-web-noaa-gcp/main/scripts
+REPO_URL=https://raw.githubusercontent.com/SWFSC/viame-web-noaa-gcp/main/scripts
 WEB_INTERNAL_IP=$(gcloud compute instances describe $INSTANCE_NAME_WEB --zone=$ZONE --format='get(networkInterfaces[0].networkIP)')
 
 gcloud compute instances stop $INSTANCE_NAME_WORKER --zone=$ZONE \

@@ -24,7 +24,7 @@ sudo chown $USER $DIVE_DIR
 chmod 755 $DIVE_DIR
 cd $DIVE_DIR
 
-REPO_URL=https://raw.githubusercontent.com/us-amlr/viame-web-noaa-gcp/main/scripts
+REPO_URL=https://raw.githubusercontent.com/SWFSC/viame-web-noaa-gcp/main/scripts
 curl -L $REPO_URL/dive_startup_web.sh -o $DIVE_DIR/dive_startup_web.sh
 chmod 755 $DIVE_DIR/dive_startup_web.sh
 
