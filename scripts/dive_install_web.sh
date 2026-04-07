@@ -2,6 +2,20 @@
 
 # Provision a VM to be used as the web node for the DIVE service
 
+# Define the required executables
+REQUIRED_CMDS=("ansible-galaxy" "ansible-playbook")
+
+# Loop through and check each one
+for cmd in "${REQUIRED_CMDS[@]}"; do
+    if ! command -v "$cmd" &> /dev/null; then
+        echo "Error: $cmd is not installed or not in PATH." >&2
+        exit 1
+    fi
+done
+
+echo "Dependencies satisfied. Proceeding with provisioning..."
+
+
 WEB_INTERNAL_IP=$1
 if [ -z "$WEB_INTERNAL_IP" ]
 then

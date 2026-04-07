@@ -11,6 +11,20 @@
 # If provided, lines for CELERY_BROKER_URL and WORKER_API_URL
 # will be written to the dive/.env file
 
+# Define the required executables
+REQUIRED_CMDS=("ansible-galaxy" "ansible-playbook")
+
+# Loop through and check each one
+for cmd in "${REQUIRED_CMDS[@]}"; do
+    if ! command -v "$cmd" &> /dev/null; then
+        echo "Error: $cmd is not installed or not in PATH." >&2
+        exit 1
+    fi
+done
+
+echo "Dependencies satisfied. Proceeding with provisioning..."
+
+
 # Process options
 while getopts ":w:" option
 do
@@ -86,11 +100,12 @@ ansible-playbook -i devops/inventory.local devops/ansible/playbook.yml \
 # https://docs.docker.com/engine/install/linux-postinstall/ 
 sudo usermod -aG docker $USER
 
-# must install docker-compose like this to get v1.29; v2 has bugs still
-# Note that `docker-compose --version` will not work until running `export TMPDIR=$HOME/tmp`
-sudo rm /usr/local/bin/docker-compose
-sudo curl -L "https://github.com/docker/compose/releases/download/v2.18.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod a+rx /usr/local/bin/docker-compose
+# # 2026: this is not necessary anymore
+# # must install docker-compose like this to get v1.29; v2 has bugs still
+# # Note that `docker-compose --version` will not work until running `export TMPDIR=$HOME/tmp`
+# sudo rm /usr/local/bin/docker-compose
+# sudo curl -L "https://github.com/docker/compose/releases/download/v2.18.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+# sudo chmod a+rx /usr/local/bin/docker-compose
 
 # Create env file. 
 # No edits if only using one VM. If -w (worker) flag, then update the env file
