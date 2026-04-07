@@ -35,7 +35,7 @@ x-worker: &base-worker
 ...
 ```
 
-In the future, this will be added as an [option on install](https://github.com/us-amlr/viame-web-noaa-gcp/issues/2). 
+In the future, this will be added as an [option on install](https://github.com/SWFSC/viame-web-noaa-gcp/issues/2). 
 
 NOTE: if you implement this option, then the docker container updates are not pulled each time the VM is started. You must stop the containers, pull the updates, and spin the containers back up:
 

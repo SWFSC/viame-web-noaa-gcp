@@ -13,7 +13,7 @@ Once you have created the VM, set variables in your Cloud Shell session that wil
 ``` bash
 ZONE=us-east4-c
 INSTANCE_NAME_WEB=viame-web-web
-REPO_URL=https://raw.githubusercontent.com/us-amlr/viame-web-noaa-gcp/main/scripts
+REPO_URL=https://raw.githubusercontent.com/SWFSC/viame-web-noaa-gcp/main/scripts
 WEB_INTERNAL_IP=$(gcloud compute instances describe $INSTANCE_NAME_WEB --zone=$ZONE --format='get(networkInterfaces[0].networkIP)')
 ```
 
