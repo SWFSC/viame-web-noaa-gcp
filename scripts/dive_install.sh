@@ -11,10 +11,9 @@
 # If provided, lines for CELERY_BROKER_URL and WORKER_API_URL
 # will be written to the dive/.env file
 
-# Define the required executables
+# Define the required executables; Loop through and check each one
 REQUIRED_CMDS=("ansible-galaxy" "ansible-playbook")
 
-# Loop through and check each one
 for cmd in "${REQUIRED_CMDS[@]}"; do
     if ! command -v "$cmd" &> /dev/null; then
         echo "Error: $cmd is not installed or not in PATH." >&2
@@ -24,6 +23,8 @@ done
 
 echo "Dependencies satisfied. Proceeding with provisioning..."
 
+# Exit immediately if a command exits with a non-zero status.
+set -e
 
 # Process options
 while getopts ":w:" option
@@ -47,13 +48,13 @@ echo "libpam-runtime libpam-runtime/override boolean false" | sudo debconf-set-s
 # Update VM
 sudo apt-get update
 
-# If full deployment, allow TCP forwarding
-if [ -z "$WEB_INTERNAL_IP" ]
-then
-  sudo sed -i \
-    's/AllowTcpForwarding no/#AllowTcpForwarding no\nAllowTcpForwarding yes/1' \
-    /etc/ssh/sshd_config
-fi
+# # If full deployment, allow TCP forwarding
+# if [ -z "$WEB_INTERNAL_IP" ]
+# then
+#   sudo sed -i \
+#     's/AllowTcpForwarding no/#AllowTcpForwarding no\nAllowTcpForwarding yes/1' \
+#     /etc/ssh/sshd_config
+# fi
 
 # Install latest nvidia driver. Reply 'no' to PAM overwrite prompt
 # # https://cloud.google.com/compute/docs/gpus/install-drivers-gpu#secure-boot

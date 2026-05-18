@@ -2,10 +2,9 @@
 
 # Provision a VM to be used as the web node for the DIVE service
 
-# Define the required executables
+# Define the required executables; Loop through and check each one
 REQUIRED_CMDS=("ansible-galaxy" "ansible-playbook")
 
-# Loop through and check each one
 for cmd in "${REQUIRED_CMDS[@]}"; do
     if ! command -v "$cmd" &> /dev/null; then
         echo "Error: $cmd is not installed or not in PATH." >&2
@@ -15,6 +14,8 @@ done
 
 echo "Dependencies satisfied. Proceeding with provisioning..."
 
+# Exit immediately if a command exits with a non-zero status.
+set -e
 
 WEB_INTERNAL_IP=$1
 if [ -z "$WEB_INTERNAL_IP" ]
@@ -25,10 +26,10 @@ fi
 
 sudo apt-get update
 
-# Allow TCP Forwarding
-sudo sed -i \
-  's/AllowTcpForwarding no/#AllowTcpForwarding no\nAllowTcpForwarding yes/1' \
-  /etc/ssh/sshd_config
+# # Allow TCP Forwarding
+# sudo sed -i \
+#   's/AllowTcpForwarding no/#AllowTcpForwarding no\nAllowTcpForwarding yes/1' \
+#   /etc/ssh/sshd_config
 
 # Prep directory
 DIVE_DIR=/opt/noaa
